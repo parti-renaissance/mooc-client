@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('mooc', {path: ':mooc'}, function() {
+    this.route('chapter', {path: ':chapter'});
+  });
 });
 
 export default Router;

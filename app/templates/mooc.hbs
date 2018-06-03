@@ -1,0 +1,25 @@
+{{#burger-menu
+  open=(media 'openMenu')
+  translucentOverlay=false
+  locked=(media 'openMenu')
+  animation='squeeze'
+  as |burger|}}
+  {{#burger.menu}}
+    {{#each model.weeks as |week|}}
+      <h1>{{week.title}}</h1>
+      <ul>
+        {{#each week.chapters as |chapter|}}
+          <li>
+            {{link-to chapter.title 'mooc.chapter' chapter.slug}}
+          </li>
+        {{/each}}
+      </ul>
+    {{/each}}
+  {{/burger.menu}}
+
+  {{#burger.outlet}}
+  <div class="page-wrapper">
+    {{outlet}}
+  </div>
+  {{/burger.outlet}}
+{{/burger-menu}}

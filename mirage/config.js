@@ -1,3 +1,6 @@
+import config from '../config/environment';
+import mooc from './fixtures/mooc';
+
 export default function() {
 
   // These comments are here to help you get started. Feel free to delete them.
@@ -23,4 +26,6 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
   */
+
+  this.get(`${config.moocAPI}/:slug`, mooc);
 }
