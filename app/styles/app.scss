@@ -6,4 +6,6 @@ $breakpoints: (medium: 800px);
 
 @import "base";
 
+@import "components/site-header";
+
 @import 'ember-burger-menu';
