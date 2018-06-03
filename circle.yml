@@ -1,0 +1,158 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: circleci/node:8-browsers
+      environment:
+        JOBS: 2
+
+restore_node: &restore_node
+  restore_cache:
+    key: node-deps-{{ checksum "package-lock.json" }}-{{ checksum "package.json" }}
+
+install_node: &install_node
+  run:
+    name: Install node dependencies
+    command: |
+      if [ ! -d node_modules ]; then
+        npm i --no-package-lock
+      fi
+
+save_node: &save_node
+  save_cache:
+    key: node-deps-{{ checksum "package-lock.json" }}-{{ checksum "package.json" }}
+    paths:
+      - node_modules
+
+run_deploy: &run_deploy
+  docker:
+    - image: circleci/node:8
+      environment:
+        JOBS: 2
+  steps:
+    - checkout
+    - <<: *restore_node
+    - run:
+        name: Deploy to GCS Bucket
+        command: |
+          echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
+          export GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcloud-service-key.json
+          env | sed -n "s/^ENV_//p" > .env
+          npx ember deploy $ENV --verbose --activate
+
+jobs:
+  install-static:
+    <<: *defaults
+
+    steps:
+      - checkout
+
+      - <<: *restore_node
+      - <<: *install_node
+      - <<: *save_node
+
+  test-static:
+    <<: *defaults
+
+    steps:
+      - checkout
+      - <<: *restore_node
+      - run:
+          name: Test
+          command: npx ember test
+
+  deploy-static-staging:
+    <<: *run_deploy
+    environment:
+      ENV: STAGING
+
+  deploy-static-prod:
+    <<: *run_deploy
+    environment:
+      ENV: PROD
+
+
+  deploy-fastboot:
+    docker:
+      - image: circleci/node:8.7
+    environment:
+        GCR_PROJECT_NAME: dpt-front
+    steps:
+      - checkout
+      - run:
+          name: "[install] install GCloud SDK"
+          command: |
+              curl -sSL https://sdk.cloud.google.com > /tmp/gcl && bash /tmp/gcl --disable-prompts
+              ~/google-cloud-sdk/install.sh --usage-reporting=false --path-update=true --bash-completion=true --rc-path=~/.bashrc --additional-components kubectl
+              sudo ln -s ~/google-cloud-sdk/bin/gcloud /usr/bin
+              sudo ln -s ~/google-cloud-sdk/bin/kubectl /usr/bin
+      - setup_remote_docker:
+            docker_layer_caching: true
+      - run:
+          name: "[docker] prepare ENV vars"
+          command: |
+              if [[ $CIRCLE_TAG ]]; then
+                  GCR_IMAGE_TAG_PREFIX=$CIRCLE_TAG
+                  GCLOUD_ENV_NAME=$GCR_PROJECT_NAME
+              else
+                  GCR_IMAGE_TAG_PREFIX=$CIRCLE_BRANCH
+                  GCLOUD_ENV_NAME="staging-${GCR_PROJECT_NAME}"
+              fi
+              echo "export GCR_IMAGE_TAG_PREFIX=${GCR_IMAGE_TAG_PREFIX}" > /tmp/env_var
+              echo "export GCLOUD_ENV_NAME=${GCLOUD_ENV_NAME}" >> /tmp/env_var
+      - run:
+          name: "[docker] build Docker image"
+          command: |
+              source /tmp/env_var
+              docker build --compress --tag eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1} .
+      - run:
+          name: "[gcloud] push Docker image"
+          command: |
+              source /tmp/env_var
+              echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
+              gcloud auth activate-service-account --key-file $HOME/gcloud-service-key.json
+              gcloud config set project $GCLOUD_PROJECT
+      - run:
+          name: "[gcloud] deploy"
+          command: |
+              source /tmp/env_var
+              gcloud docker -- push eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1}
+              gcloud container images add-tag eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1} eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-default
+workflows:
+  version: 2
+  install-test-deploy:
+    jobs:
+      - install-static:
+          filters:
+            tags:
+              only: /.*/
+      - test-static:
+          filters:
+            tags:
+              only: /.*/
+          requires:
+            - install-static
+
+      - deploy-static-staging:
+          requires:
+            - test-static
+          filters:
+            branches:
+              only: master
+      - deploy-static-prod:
+          requires:
+            - test-static
+          filters:
+            tags:
+              only: /^v[0-9]+\.[0-9]+\.[0-9]+/
+            branches:
+              ignore: /.*/
+
+      - deploy-fastboot:
+          requires:
+            - test-static
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /^v[0-9]+\.[0-9]+\.[0-9]+/
