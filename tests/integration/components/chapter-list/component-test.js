@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | chapter-list', function(hooks) {
@@ -12,15 +12,6 @@ module('Integration | Component | chapter-list', function(hooks) {
 
     await render(hbs`{{chapter-list}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#chapter-list}}
-        template block text
-      {{/chapter-list}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.ok(find('.chapter-list'));
   });
 });

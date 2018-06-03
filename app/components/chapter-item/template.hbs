@@ -5,9 +5,11 @@
       {{chapter.title}}
     </div>
 
+    {{#if chapter.duration}}
     <div class="chapter-duration">
-      {{fa-icon 'clock'}}
+      {{fa-icon 'clock-o'}}
       {{chapter.duration}}
     </div>
+    {{/if}}
   </div>
 {{/link-to}}
