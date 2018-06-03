@@ -1,0 +1,13 @@
+{{#link-to 'mooc.chapter' chapter.slug class="chapter-item"}}
+  <div class="chapter-thumb"></div>
+  <div class="chapter-body">
+    <div class="chapter-title">
+      {{chapter.title}}
+    </div>
+
+    <div class="chapter-duration">
+      {{fa-icon 'clock'}}
+      {{chapter.duration}}
+    </div>
+  </div>
+{{/link-to}}

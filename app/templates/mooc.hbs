@@ -1,21 +1,19 @@
 {{site-header}}
 
 {{#burger-menu
-  open=(media 'openMenu')
+  open=(media 'isOpenMenu')
   translucentOverlay=false
-  locked=(media 'openMenu')
+  locked=(media 'isOpenMenu')
   animation='squeeze'
+  width=(if (media 'isOpenMenu') 528 320)
   as |burger|}}
   {{#burger.menu}}
     {{#each model.weeks as |week|}}
-      <h1>{{week.title}}</h1>
-      <ul>
-        {{#each week.chapters as |chapter|}}
-          <li>
-            {{link-to chapter.title 'mooc.chapter' chapter.slug}}
-          </li>
-        {{/each}}
-      </ul>
+      <section>
+        {{week-header week}}
+
+        {{chapter-list week.chapters}}
+      </section>
     {{/each}}
   {{/burger.menu}}
 

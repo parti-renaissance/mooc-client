@@ -1,0 +1,35 @@
+@import "../mixins/vars";
+
+.site-header {
+  display: flex;
+  padding: 20px;
+}
+
+.site-header__lockup {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo {
+  font-family: $font-gillsans;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1.2px;
+  color: $darkgray;
+
+  text-decoration: none;
+}
+
+.site-header__separator {
+  color: #e6ecf0;;
+  margin: 0 10px;
+}
+
+.site-tagline  {
+  font-family: $font-gillsans;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1.1px;
+  color: $purple;
+}

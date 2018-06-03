@@ -1,0 +1,33 @@
+@import "../mixins/vars";
+
+.chapter-item {
+  display: flex;
+  text-decoration: none;
+}
+
+.chapter-thumb {
+  flex-basis: 138px;
+  background-color: #f1f1f1;
+}
+
+.chapter-body {
+  flex: 1;
+  padding: 15px 35px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.chapter-title {
+  font-family: $font-roboto;
+  font-size: 15px;
+  color: $purple;
+}
+
+.chapter-duration {
+  font-family: $font-gillsans;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  color: $gray;
+}
