@@ -1,0 +1,135 @@
+@import "../mixins/vars";
+
+.chapter-ui {
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chapter-embed {
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.chapter-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.chapter-controls {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.chapter-controls__left,
+.chapter-controls__right {
+  flex: 1;
+}
+
+.chapter-controls__right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chapter-controls__center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+
+  > .share-button {
+    flex-basis: 260px;
+  }
+}
+
+.chapter-body {
+  border-radius: 3px;
+  box-shadow: 0 2px 25px 0 rgba(111, 128, 255, 0.07);
+  border: solid 1px $lightgray;
+  padding: 30px;
+  flex: 1 1 315px;
+
+  overflow-y: scroll;
+}
+
+.chapter-title {
+  font-family: $font-gillsans;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  color: $purple;
+
+  margin-bottom: 14px;
+}
+
+.chapter-description {
+  font-family: $font-roboto;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: black;
+  margin-bottom: 15px;
+
+  a {
+    color: $purple;
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.chapter-links,
+.chapter-attachments {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  font-family: $font-roboto;
+  font-size: 15px;
+  font-weight: 300;
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: $purple;
+    text-decoration: none;
+  }
+
+  i {
+    color: $purple;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+
+  span {
+    font-family: $font-roboto;
+    font-size: 12px;
+    font-weight: 300;
+    color: $mediumgray;;
+  }
+}
+
+.chapter-attachments li a {
+  margin-right: 75px;
+}

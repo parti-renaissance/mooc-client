@@ -17,6 +17,11 @@ module.exports = function(defaults) {
   });
 
   app.import('node_modules/normalize.css/normalize.css');
+  app.import('node_modules/@typeform/embed/dist/embed.js', {
+    using: [
+      {transformation: 'fastbootShim'}
+    ]
+  });
 
   return app.toTree();
 };

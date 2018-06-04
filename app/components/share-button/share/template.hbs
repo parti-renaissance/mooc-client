@@ -1,0 +1,13 @@
+{{#if (eq service 'email')}}
+<a href={{url}} target="_blank" class="share-button__share">
+  {{fa-icon 'envelope-o'}}
+</a>
+{{else}}
+<button class="share-button__share" {{action 'openShare' url}}>
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    {{fa-icon (or icon service)}}
+  {{/if}}
+</button>
+{{/if}}

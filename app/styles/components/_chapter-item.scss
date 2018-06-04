@@ -5,12 +5,12 @@
   text-decoration: none;
 }
 
-.chapter-thumb {
+.chapter-item__thumb {
   flex-basis: 138px;
   background-color: #f1f1f1;
 }
 
-.chapter-body {
+.chapter-item__body {
   flex: 1;
   padding: 15px 35px;
 
@@ -18,13 +18,13 @@
   justify-content: space-between;
 }
 
-.chapter-title {
+.chapter-item__title {
   font-family: $font-roboto;
   font-size: 15px;
   color: $purple;
 }
 
-.chapter-duration {
+.chapter-item__duration {
   font-family: $font-gillsans;
   font-size: 15px;
   font-weight: 300;

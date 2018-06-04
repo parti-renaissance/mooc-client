@@ -1,12 +1,12 @@
 {{#link-to 'mooc.chapter' chapter.slug class="chapter-item"}}
-  <div class="chapter-thumb"></div>
-  <div class="chapter-body">
-    <div class="chapter-title">
+  <div class="chapter-item__thumb"></div>
+  <div class="chapter-item__body">
+    <div class="chapter-item__title">
       {{chapter.title}}
     </div>
 
     {{#if chapter.duration}}
-    <div class="chapter-duration">
+    <div class="chapter-item__duration">
       {{fa-icon 'clock-o'}}
       {{chapter.duration}}
     </div>

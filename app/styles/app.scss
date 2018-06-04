@@ -10,5 +10,8 @@ $breakpoints: (medium: 800px);
 @import "components/week-header";
 @import "components/chapter-list";
 @import "components/chapter-item";
+@import "components/chapter-ui";
+@import "components/navigate-button";
+@import "components/share-button";
 
 @import 'ember-burger-menu';

@@ -1,0 +1,32 @@
+@import "../mixins/vars";
+
+.navigate-button {
+  appearance: none;
+  border: 1px solid $purple;
+  font-family: $font-gillsans;
+  font-size: 15px;
+  font-weight: 300;
+  color: $purple;
+  padding: 15px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: $lightgray;
+  }
+
+  i.previous-arrow {
+    margin-right: 20px;
+  }
+
+  i.next-arrow {
+    margin-left: 20px;
+  }
+}

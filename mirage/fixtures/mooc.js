@@ -11,8 +11,72 @@ export default {
     },
     {
       "type": "video",
-      "title": "My article Name",
-      "slug": "my-article-name",
+      "title": "Article Name One",
+      "slug": "article-name-one",
+      "videoId": "M7lc1UVf-VE",
+      "duration": "3:39",
+      "content": "<div><p>Lorem ipsum dolor sit amet, consectetur adipisicing</p></div>",
+      "links": [
+        {
+          "linkName": "My first link",
+          "linkUrl": "my_link_url.googlestorage.com"
+        },
+        {
+          "linkName": "My second link",
+          "linkUrl": "my_second_link_url.googlestorage.com"
+        }
+      ],
+      "attachments": [
+        {
+          "attachmentName": "My first attachment",
+          "attachmentUrl": "my_attachment.googlestorage.com"
+        },
+        {
+          "attachmentName": "My second attachment",
+          "attachmentUrl": "my_second_attachment.googlestorage.com"
+        },
+        {
+          "attachmentName": "My second attachment",
+          "attachmentUrl": "my_second_attachment.googlestorage.com"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Article Name Two",
+      "slug": "article-name-two",
+      "videoId": "M7lc1UVf-VE",
+      "duration": "3:39",
+      "content": "<div><p>Lorem ipsum dolor sit amet, consectetur adipisicing</p></div>",
+      "links": [
+        {
+          "linkName": "My first link",
+          "linkUrl": "my_link_url.googlestorage.com"
+        },
+        {
+          "linkName": "My second link",
+          "linkUrl": "my_second_link_url.googlestorage.com"
+        }
+      ],
+      "attachments": [
+        {
+          "attachmentName": "My first attachment",
+          "attachmentUrl": "my_attachment.googlestorage.com"
+        },
+        {
+          "attachmentName": "My second attachment",
+          "attachmentUrl": "my_second_attachment.googlestorage.com"
+        },
+        {
+          "attachmentName": "My second attachment",
+          "attachmentUrl": "my_second_attachment.googlestorage.com"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "title": "Article Name Three",
+      "slug": "article-name-three",
       "videoId": "M7lc1UVf-VE",
       "duration": "3:39",
       "content": "<div><p>Lorem ipsum dolor sit amet, consectetur adipisicing</p></div>",

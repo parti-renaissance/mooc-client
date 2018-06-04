@@ -1,0 +1,53 @@
+<div class="chapter-embed">
+  {{#if chapter.videoId}}
+    <div class="chapter-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{chapter.videoId}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  {{else if chapter.typeformEmbed}}
+    {{{typeformEmbed}}}
+  {{/if}}
+</div>
+
+<div class="chapter-controls">
+  <div class="chapter-controls__left">
+  {{#if chapter.previousChapter}}
+    {{navigate-button 'previous' chapter}}
+  {{/if}}
+  </div>
+  <div class="chapter-controls__center">
+    {{share-button chapter=chapter}}
+  </div>
+  <div class="chapter-controls__right">
+  {{#if chapter.nextChapter}}
+    {{navigate-button 'next' chapter}}
+  {{/if}}
+  </div>
+</div>
+
+<div class="chapter-body">
+  <h1 class="chapter-title">{{chapter.title}}</h1>
+
+  <div class="chapter-description">
+    {{{chapter.content}}}
+  </div>
+
+  {{#with chapter.links as |links|}}
+  <ul class="chapter-links">
+    {{#each links as |link|}}
+    <li>
+      <a href={{link.linkUrl}} target="_blank">{{fa-icon 'link'}} {{link.linkName}}</a>
+    </li>
+    {{/each}}
+  </ul>
+  {{/with}}
+
+  {{#with chapter.attachments as |attachments|}}
+  <ul class="chapter-attachments">
+    {{#each attachments as |att|}}
+    <li>
+      <a href={{att.attachmentUrl}} target="_blank" download={{att.attachmentName}}>{{fa-icon 'file-pdf-o'}} {{att.attachmentName}}</a> <span>Télecharger / Partager</span>
+    </li>
+    {{/each}}
+  </ul>
+  {{/with}}
+</div>

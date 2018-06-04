@@ -1,0 +1,40 @@
+@import "../mixins/vars";
+
+.share-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.share-button__label {
+  font-family: $font-gillsans;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  color: $purple;
+}
+
+.share-button__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 120px;
+}
+
+.share-button__share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  appearance: none;
+  padding: 0;
+  border: none;
+
+  background-color: $purple;
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+}

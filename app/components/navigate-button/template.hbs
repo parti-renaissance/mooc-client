@@ -1,0 +1,5 @@
+{{#if (eq type 'previous')}}
+  {{fa-icon 'long-arrow-left' class="previous-arrow"}} {{capitalize chapter.previousChapter.type}} précédant
+{{else}}
+  {{capitalize chapter.nextChapter.type}} suivant {{fa-icon 'long-arrow-right' class="next-arrow"}}
+{{/if}}
