@@ -1,26 +1,26 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | navigate-button', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    this.set('chapter', {
+      previousChapter: {
+        type: 'video'
+      },
+      nextChapter: {
+        type: 'quiz'
+      }
+    });
+    await render(hbs`{{navigate-button 'previous' chapter}}`);
 
-    await render(hbs`{{navigate-button}}`);
+    assert.ok(find('.navigate-button'));
+    assert.equal(find('.navigate-button').textContent.trim(), 'Video précédant');
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#navigate-button}}
-        template block text
-      {{/navigate-button}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    await render(hbs`{{navigate-button 'next' chapter}}`);
+    assert.equal(find('.navigate-button').textContent.trim(), 'Quiz suivant');
   });
 });

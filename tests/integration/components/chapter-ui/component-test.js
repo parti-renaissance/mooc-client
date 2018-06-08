@@ -1,26 +1,21 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | chapter-ui', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    this.set('chapter', {
+      type: "chapter",
+      title: "Semaine 1 : Le coup de fourchette pour détendre notre santé",
+      slug: "semaine-1-le-coup-de-fourchette-pour-detendre-notre-sante",
+      publishedAt: "2018-06-09 09:30:00"
+    });
 
-    await render(hbs`{{chapter-ui}}`);
+    await render(hbs`{{chapter-ui chapter=chapter}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#chapter-ui}}
-        template block text
-      {{/chapter-ui}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.ok(find('.chapter-ui'));
   });
 });

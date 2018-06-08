@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | share-button', function(hooks) {
@@ -12,15 +12,6 @@ module('Integration | Component | share-button', function(hooks) {
 
     await render(hbs`{{share-button}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#share-button}}
-        template block text
-      {{/share-button}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.ok(find('.share-button'));
   });
 });

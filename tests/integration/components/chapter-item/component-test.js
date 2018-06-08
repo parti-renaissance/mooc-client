@@ -14,7 +14,7 @@ module('Integration | Component | chapter-item', function(hooks) {
     await render(hbs`{{chapter-item chapter}}`);
 
     assert.ok(find('.chapter-item'));
-    assert.equal(find('.chapter-title').textContent.trim(), 'Foo');
-    assert.equal(find('.chapter-duration').textContent.trim(), '3:00');
+    assert.equal(find('.chapter-item__title').textContent.trim(), 'Foo');
+    assert.equal(find('.chapter-item__duration').textContent.trim(), '3:00');
   });
 });
