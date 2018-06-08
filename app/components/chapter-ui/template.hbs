@@ -1,10 +1,10 @@
 <div class="chapter-embed">
-  {{#if chapter.videoId}}
+  {{#if chapter.youtubeId}}
     <div class="chapter-video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{chapter.videoId}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{chapter.youtubeId}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
   {{else if chapter.typeformEmbed}}
-    {{{typeformEmbed}}}
+    {{{chapter.typeformEmbed}}}
   {{/if}}
 </div>
 
