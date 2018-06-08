@@ -11,7 +11,7 @@
 <div class="chapter-controls">
   <div class="chapter-controls__left">
   {{#if chapter.previousChapter}}
-    {{navigate-button 'previous' chapter}}
+    {{navigate-button 'previous' chapter action=previous class="previous-button"}}
   {{/if}}
   </div>
   <div class="chapter-controls__center">
@@ -19,7 +19,7 @@
   </div>
   <div class="chapter-controls__right">
   {{#if chapter.nextChapter}}
-    {{navigate-button 'next' chapter}}
+    {{navigate-button 'next' chapter action=next class="next-button"}}
   {{/if}}
   </div>
 </div>
