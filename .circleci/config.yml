@@ -1,82 +1,65 @@
 version: 2
 
-defaults: &defaults
-  docker:
-    - image: circleci/node:8-browsers
-      environment:
-        JOBS: 2
-
-restore_node: &restore_node
-  restore_cache:
-    key: node-deps-{{ checksum "package-lock.json" }}-{{ checksum "package.json" }}
-
-install_node: &install_node
-  run:
-    name: Install node dependencies
-    command: |
-      if [ ! -d node_modules ]; then
-        npm i --no-package-lock
-      fi
-
-save_node: &save_node
-  save_cache:
-    key: node-deps-{{ checksum "package-lock.json" }}-{{ checksum "package.json" }}
-    paths:
-      - node_modules
-
-run_deploy: &run_deploy
-  docker:
-    - image: circleci/node:8
-      environment:
-        JOBS: 2
-  steps:
-    - checkout
-    - <<: *restore_node
-    - run:
-        name: Deploy to GCS Bucket
-        command: |
-          echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
-          export GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcloud-service-key.json
-          env | sed -n "s/^ENV_//p" > .env
-          npx ember deploy $ENV --verbose --activate
-
 jobs:
   install-static:
-    <<: *defaults
+    docker:
+      - image: circleci/node:8.7
 
     steps:
       - checkout
 
-      - <<: *restore_node
-      - <<: *install_node
-      - <<: *save_node
+      - restore_cache:
+          key: node-deps-{{ checksum "package-lock.json" }}-{{ checksum "package.json" }}
+      - run:
+          name: Install node dependencies
+          command: |
+            if [ ! -d ./node_modules ]; then
+              npm i --no-package-lock
+            fi
+      - save_cache:
+          key: node-deps-{{ checksum "package-lock.json" }}-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
 
   test-static:
-    <<: *defaults
-
+    docker:
+      - image: circleci/node:8.7-browsers
+        environment:
+          JOBS: 2
     steps:
       - checkout
-      - <<: *restore_node
+      - restore_cache:
+          key: node-deps-{{ checksum "package-lock.json" }}-{{ checksum "package.json" }}
       - run:
           name: Test
           command: npx ember test
 
-  deploy-static-staging:
-    <<: *run_deploy
-    environment:
-      ENV: STAGING
-
-  deploy-static-prod:
-    <<: *run_deploy
-    environment:
-      ENV: PROD
-
-
+  deploy-static:
+    docker:
+      - image: circleci/node:8.7
+        environment:
+          JOBS: 2
+    steps:
+      - checkout
+      - restore_cache:
+          key: node-deps-{{ checksum "package-lock.json" }}-{{ checksum "package.json" }}
+      - run:
+          name: Deploy to GCS Bucket
+          command: |
+            echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
+            export GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcloud-service-key.json
+            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+              env | sed -n 's/^DEMO_//p' > .env
+              npx ember deploy demo --verbose --activate
+            elif grep -q "v[0-9]\+\.[0-9]\+\.[0-9]\+" <<< "$CIRCLE_TAG"; then
+              env | sed -n 's/^PROD_//p' > .env
+              npx ember deploy production --verbose --activate
+            fi
   deploy-fastboot:
     docker:
       - image: circleci/node:8.7
     environment:
-        GCR_PROJECT_NAME: dpt-front
+        GCR_PROJECT_NAME: mooc-front
     steps:
       - checkout
       - run:
@@ -132,27 +115,19 @@ workflows:
               only: /.*/
           requires:
             - install-static
-
-      - deploy-static-staging:
-          requires:
-            - test-static
-          filters:
-            branches:
-              only: master
-      - deploy-static-prod:
+      - deploy-static:
           requires:
             - test-static
           filters:
             tags:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+/
             branches:
-              ignore: /.*/
-
+              only: master
       - deploy-fastboot:
           requires:
             - test-static
           filters:
-            branches:
-              only: master
             tags:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+/
+            branches:
+              only: master
