@@ -33,9 +33,7 @@
 
     border-style: solid;
     border-color: transparent;
-    border-top-width: 20px;
-    border-bottom-width: 20px;
-    border-left-width: 32px;
+    border-width: 16px 0 16px 25.5px;
 
     border-left-color: white;
   }
@@ -59,7 +57,7 @@
   align-items: center;
 
   color: white;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .chapter-item__body {
