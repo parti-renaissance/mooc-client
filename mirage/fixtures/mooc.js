@@ -37,7 +37,7 @@ export default {
       "duration": "01:30:00"
     },
     {
-      "type": "quizz",
+      "type": "quiz",
       "title": "Le test de votre vie",
       "slug": "le-test-de-votre-vie",
       "content": "<p>une description</p>",
