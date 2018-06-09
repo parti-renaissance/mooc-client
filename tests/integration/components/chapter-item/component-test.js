@@ -21,7 +21,7 @@ module('Integration | Component | chapter-item', function(hooks) {
     assert.ok(find('.chapter-item'));
     assert.equal(find('.chapter-item__title').textContent.trim(), 'Foo', 'title');
     assert.equal(find('.chapter-item__duration').textContent.trim(), '30:15', 'duration');
-    assert.equal(find('.chapter-item__yt-thumb').getAttribute('style'), `background-image: url(${chapter.youtubeThumbnail});`, 'thumbnail');
+    assert.equal(find('.chapter-item__yt-thumb').getAttribute('style'), `background-image: url(${chapter.youtubeThumbnail})`, 'thumbnail');
 
     set(chapter, 'duration', '01:02:01');
     await render(hbs`{{chapter-item chapter}}`);
