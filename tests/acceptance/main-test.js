@@ -16,5 +16,13 @@ module('Acceptance | main', function(hooks) {
     await click('.chapter-list li:nth-child(1) a');
 
     assert.equal(currentURL(), `/mooc/${moocFixture.elements[1].slug}`);
+
+    await click('.next-button');
+
+    assert.equal(currentURL(), `/mooc/${moocFixture.elements[2].slug}`);
+
+    await click('.previous-button');
+
+    assert.equal(currentURL(), `/mooc/${moocFixture.elements[1].slug}`);
   });
 });
