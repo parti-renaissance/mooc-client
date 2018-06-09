@@ -6,8 +6,60 @@
 }
 
 .chapter-item__thumb {
+  position: relative;
+  height: 95px;
   flex-basis: 138px;
   background-color: #f1f1f1;
+
+  .chapter-item--quiz & {
+    background-color: #b8e986;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chapter-item--video &:after {
+    // play icon
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    height: 0;
+    width: 0;
+
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 32px;
+
+    border-left-color: white;
+  }
+}
+
+.chapter-item__yt-thumb {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.chapter-item__quiz-thumb {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 12px;
 }
 
 .chapter-item__body {
