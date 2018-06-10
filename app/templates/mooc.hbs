@@ -1,18 +1,23 @@
-{{site-header}}
-
 {{#burger-menu
   open=(media 'isOpenMenu')
-  translucentOverlay=false
+  translucentOverlay=(not (media 'isOpenMenu'))
   locked=(media 'isOpenMenu')
-  animation='squeeze'
+  animation=(if (media 'isOpenMenu') 'squeeze' 'slide')
   width=(if (media 'isOpenMenu') size 320)
   as |burger|}}
-  {{#burger.menu}}
+
+  {{site-header toggleMenu=(action burger.state.actions.toggle)}}
+
+  {{#burger.menu as |menu|}}
     {{#each model.weeks as |week|}}
       <section>
         {{week-header week}}
 
-        {{chapter-list week.chapters}}
+        {{#chapter-list week.chapters as |item|}}
+          {{#menu.item dismissOnClick=true}}
+            {{item}}
+          {{/menu.item}}
+        {{/chapter-list}}
       </section>
     {{/each}}
   {{/burger.menu}}

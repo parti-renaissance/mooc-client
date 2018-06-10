@@ -7,9 +7,15 @@
 
 .chapter-item__thumb {
   position: relative;
-  height: 95px;
-  flex-basis: 138px;
+  min-height: 65px;
+  flex-basis: 95px;
+
   background-color: #f1f1f1;
+
+  @include media('>=medium') {
+    min-height: 95px;
+    flex-basis: 138px;
+  }
 
   .chapter-item--quiz & {
     background-color: #b8e986;
@@ -62,16 +68,35 @@
 
 .chapter-item__body {
   flex: 1;
-  padding: 15px 35px;
+  padding: 15px;
 
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include media('>=medium') {
+    padding: 15px 25px;
+  }
+
+  @include media('>=wide') {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    padding: 15px 35px;
+  }
 }
 
 .chapter-item__title {
   font-family: $font-roboto;
-  font-size: 15px;
+  font-size: 12px;
   color: $purple;
+
+  @include media('>=medium') {
+    font-size: 15px;
+  }
+
+  @include media('>=wide') {
+    margin-right: 15px;
+  }
 }
 
 .chapter-item__duration {
@@ -80,4 +105,12 @@
   font-weight: 300;
   letter-spacing: 1.2px;
   color: $gray;
+
+  order: -1;
+  flex-basis: 100%;
+
+  @include media('>=wide') {
+    order: 0;
+    flex: 1 0 auto;
+  }
 }

@@ -1,11 +1,18 @@
 @import "../mixins/vars";
 
 .chapter-ui {
-  padding: 40px;
-  height: 100%;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media only screen and (min-height: 800px) and (min-width: 800px) {
+    height: 100%;
+  }
+
+  @include media('>=medium') {
+    padding: 40px;
+  }
 }
 
 .chapter-embed {
@@ -32,30 +39,78 @@
 .chapter-controls {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   flex: 1;
 
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include media('>=medium') {
+    flex-wrap: nowrap;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 .chapter-controls__left,
 .chapter-controls__right {
-  flex: 1;
+  display: flex;
+
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @include media('>=medium') {
+    flex: 1;
+    flex-basis: auto;
+  }
 }
 
 .chapter-controls__right {
-  display: flex;
-  justify-content: flex-end;
+  @include media('>=medium') {
+    justify-content: flex-end;
+  }
+}
+
+.chapter-controls__left {
+  @include media('>=medium') {
+    justify-content: flex-start;
+  }
 }
 
 .chapter-controls__center {
-  flex: 2;
   display: flex;
   justify-content: center;
 
+  flex-basis: 100%;
+  margin: 15px 0;
+
   > .share-button {
     flex-basis: 260px;
+  }
+
+  @include media('>=medium') {
+    margin: 0 10px;
+    flex-basis: auto;
+    flex: 2 2 auto;
+
+    > .share-button {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  @include media('>=1033px') {
+    > .share-button {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  @include media('>=wide') {
+    margin: 0;
   }
 }
 

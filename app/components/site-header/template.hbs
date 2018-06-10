@@ -1,7 +1,15 @@
 <div class="site-header__lockup">
+  {{#if (not (media 'isOpenMenu'))}}
+    <button {{action toggleMenu}} class="site-header__menu">
+      {{fa-icon 'bars'}}
+    </button>
+  {{/if}}
   <a class="site-logo" href="https://en-marche.fr" target="_blank">
     EM !
   </a>
-  <div class="site-header__separator">|</div>
-  <div class="site-tagline">Faire de sa fourchette un acte politique.</div>
+
+  {{#if (media 'isOpenMenu')}}
+    <div class="site-header__separator">|</div>
+    <div class="site-tagline">Faire de sa fourchette un acte politique.</div>
+  {{/if}}
 </div>

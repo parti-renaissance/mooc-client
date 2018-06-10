@@ -1,25 +1,47 @@
 @import "../mixins/vars";
 
 .site-header {
-  display: flex;
   padding: 20px;
   border: solid 0.5px $lightgray;
+
+  @include media('>=medium') {
+    display: flex;
+  }
+}
+
+.site-header__menu {
+  display: flex;
+  align-items: center;
+
+  padding: 0;
+  appearance: none;
+  background: transparent;
+  border: none;
 }
 
 .site-header__lockup {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @include media('>=medium') {
+    justify-content: flex-start;
+  }
 }
 
 .site-logo {
   font-family: $font-gillsans;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: bold;
   font-style: italic;
   letter-spacing: 1.2px;
   color: $darkgray;
 
   text-decoration: none;
+
+  @include media('>=medium') {
+    font-size: 28px;
+  }
 }
 
 .site-header__separator {
@@ -29,8 +51,12 @@
 
 .site-tagline  {
   font-family: $font-gillsans;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
   letter-spacing: 1.1px;
   color: $purple;
+
+  @include media('>=medium') {
+    font-size: 24px;
+  }
 }

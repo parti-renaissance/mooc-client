@@ -1,7 +1,7 @@
 @import "mixins/fonts";
 @import "mixins/vars";
 
-$breakpoints: (medium: 800px);
+$breakpoints: (medium: 800px, wide: 1300px);
 @import "_include-media";
 
 @import "base";
@@ -13,5 +13,7 @@ $breakpoints: (medium: 800px);
 @import "components/chapter-ui";
 @import "components/navigate-button";
 @import "components/share-button";
+
+$bm-transition-duration: 0.3s;
 
 @import 'ember-burger-menu';

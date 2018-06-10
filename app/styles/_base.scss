@@ -18,6 +18,12 @@ html {
 
 .bm-menu {
   background: white;
+  overflow-y: scroll;
+  top: 64px !important;
+
+  @include media('>=medium') {
+    top: 0 !important;
+  }
 }
 
 h1,

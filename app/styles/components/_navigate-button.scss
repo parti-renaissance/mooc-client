@@ -2,17 +2,23 @@
 
 .navigate-button {
   appearance: none;
+  background-color: white;
   border: 1px solid $purple;
   font-family: $font-gillsans;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 300;
   color: $purple;
-  padding: 15px;
+  padding: 7.5px;
 
   cursor: pointer;
 
   display: flex;
   align-items: center;
+
+  @include media('>=medium') {
+    padding: 15px;
+    font-size: 15px;
+  }
 
   &:focus {
     outline: none;

@@ -1,5 +1,5 @@
 {{#each chapters as |chapter|}}
   <li>
-    {{chapter-item chapter}}
+    {{yield (component 'chapter-item' chapter)}}
   </li>
 {{/each}}
