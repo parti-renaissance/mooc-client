@@ -42,6 +42,8 @@ module.exports = function(environment) {
 
     ENV.APP.rootElement = '#ember-testing';
     ENV.APP.autoboot = false;
+
+    ENV.moocAPI = 'http://example.com/api';
   }
 
   if (environment === 'production') {
