@@ -1,7 +1,6 @@
 # mooc-client
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A front end web app to provide a UI to En Marche's MOOC content.
 
 ## Prerequisites
 
@@ -14,10 +13,12 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd mooc-client`
-* `npm install`
+* `$ git clone https://github.com/EnMarche/mooc-client` this repository
+* `$ cd mooc-client`
+* `$ npm install`
+* `$ cp .env.sample .env`
 
+Set the value of `MOOC_API` to the value of the MOOC backend. If you want to run the fastboot process locally (e.g. `$ node fastboot`), you will also need to fill in the correct values for `FASTBOOT_MANIFEST` and `GCS_BUCKET`.
 ## Running / Development
 
 * `ember serve`
