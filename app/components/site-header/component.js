@@ -1,5 +1,7 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['site-header']
+  classNames: ['site-header'],
+
+  toggleMenu() {}
 });

@@ -1,5 +1,9 @@
 {{#each chapters as |chapter|}}
   <li>
-    {{yield (component 'chapter-item' chapter)}}
+    {{#if (has-block)}}
+      {{yield (component 'chapter-item' chapter)}}
+    {{else}}
+      {{chapter-item chapter}}
+    {{/if}}
   </li>
 {{/each}}
