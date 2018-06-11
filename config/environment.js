@@ -37,7 +37,7 @@ module.exports = function(environment) {
       enabled: false
     }
 
-    ENV.fastboot.hostWhitelist = [ /^localhost:\d+$/];
+    ENV.fastboot.hostWhitelist = [/^localhost:\d+$/];
   }
 
   if (environment === 'test') {
@@ -52,6 +52,7 @@ module.exports = function(environment) {
     ENV.APP.autoboot = false;
 
     ENV.moocAPI = 'http://example.com/api';
+    ENV.fastboot.hostWhitelist = ['*'];
   }
 
   if (environment === 'production') {
