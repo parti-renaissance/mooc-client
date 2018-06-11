@@ -24,7 +24,10 @@ module.exports = function(environment) {
     moocAPI: process.env.MOOC_API,
     fastboot: {
       hostWhitelist: [process.env.HOST_WHITELIST]
-    }
+    },
+    moment: {
+      includeLocales: ['fr']
+    },
   };
 
   if (environment === 'development') {
