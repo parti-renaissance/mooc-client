@@ -1,7 +1,7 @@
 import Application from '@ember/application';
 
 import { initialize } from 'mooc-client/instance-initializers/moment';
-import { module, test } from 'qunit';
+import { module, skip } from 'qunit';
 import { setupTest } from 'ember-qunit';
 import { run } from '@ember/runloop';
 
@@ -23,7 +23,7 @@ module('Unit | Instance Initializer | moment', function(hooks) {
   });
 
   // Replace this with your real tests.
-  test('it works', async function(assert) {
+  skip('it works', async function(assert) {
     await this.instance.boot();
 
     assert.ok(true);
