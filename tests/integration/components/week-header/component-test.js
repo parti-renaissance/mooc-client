@@ -17,6 +17,6 @@ module('Integration | Component | week-header', function(hooks) {
     await render(hbs`{{week-header week}}`);
 
     assert.ok(find('.week-header'));
-    assert.equal(find('.week-date').textContent.trim(), moment(now).format('D/M/YY'));
+    assert.equal(find('.week-date').textContent.trim(), moment(now).format('D MMM YYYY'));
   });
 });
