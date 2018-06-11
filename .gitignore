@@ -24,3 +24,7 @@ package.json.ember-try
 
 .env
 .*~
+
+# fastboot cruft
+deploy-dist*
+gcloud-service-key.json
