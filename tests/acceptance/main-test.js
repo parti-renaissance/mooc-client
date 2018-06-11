@@ -11,18 +11,18 @@ module('Acceptance | main', function(hooks) {
   test('main flow', async function(assert) {
     await visit('/mooc');
 
-    assert.equal(currentURL(), '/mooc');
+    assert.equal(currentURL(), `/mooc/${moocFixture.elements[1].slug}`, 'should redirect to first chapter');
 
-    await click('.chapter-list li:nth-child(1) a');
-
-    assert.equal(currentURL(), `/mooc/${moocFixture.elements[1].slug}`);
-
-    await click('.next-button');
+    await click('.chapter-list li:nth-child(2) a');
 
     assert.equal(currentURL(), `/mooc/${moocFixture.elements[2].slug}`);
 
+    await click('.next-button');
+
+    assert.equal(currentURL(), `/mooc/${moocFixture.elements[3].slug}`);
+
     await click('.previous-button');
 
-    assert.equal(currentURL(), `/mooc/${moocFixture.elements[1].slug}`);
+    assert.equal(currentURL(), `/mooc/${moocFixture.elements[2].slug}`);
   });
 });
