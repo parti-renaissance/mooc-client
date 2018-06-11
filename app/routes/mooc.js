@@ -16,8 +16,10 @@ export default Route.extend({
   },
   setupController(controller, model) {
     this._super(controller, model);
-    window.addEventListener('resize',() => debounce(this, measure, controller, 150));
-    measure(controller);
+    if (typeof FastBoot === 'undefined') {
+      window.addEventListener('resize',() => debounce(this, measure, controller, 150));
+      measure(controller);
+    }
   },
 
 });

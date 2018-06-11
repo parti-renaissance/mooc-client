@@ -21,7 +21,10 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-    moocAPI: process.env.MOOC_API
+    moocAPI: process.env.MOOC_API,
+    fastboot: {
+      hostWhitelist: [process.env.HOST_WHITELIST]
+    }
   };
 
   if (environment === 'development') {
@@ -30,6 +33,11 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV['ember-cli-mirage'] = {
+      enabled: false
+    }
+
+    ENV.fastboot.hostWhitelist = [ /^localhost:\d+$/];
   }
 
   if (environment === 'test') {
