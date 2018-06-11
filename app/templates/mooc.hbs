@@ -1,6 +1,6 @@
 {{#burger-menu
   open=(media 'isOpenMenu')
-  translucentOverlay=(not (media 'isOpenMenu'))
+  translucentOverlay=false
   locked=(media 'isOpenMenu')
   animation=(if (media 'isOpenMenu') 'squeeze' 'slide')
   width=(if (media 'isOpenMenu') size 320)

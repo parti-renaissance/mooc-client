@@ -26,6 +26,21 @@ html {
   }
 }
 
+.ember-burger-menu.is-open {
+  @include media('<=medium') {
+    .bm-content:after {
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      background-color: rgba(0, 0, 0, 0.35);
+    }
+  }
+}
+
 h1,
 h2,
 h3,
