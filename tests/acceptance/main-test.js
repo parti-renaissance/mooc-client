@@ -24,5 +24,13 @@ module('Acceptance | main', function(hooks) {
     await click('.previous-button');
 
     assert.equal(currentURL(), `/mooc/${moocFixture.elements[2].slug}`);
+
+    await click('.chapter-list li:nth-child(3) a');
+    await click('.next-button');
+
+    assert.equal(currentURL(), `/mooc/${moocFixture.elements[5].slug}`, 'can navigate forward across weeks');
+
+    await click('.previous-button');
+  assert.equal(currentURL(), `/mooc/${moocFixture.elements[3].slug}`, 'can navigate backward across weeks');
   });
 });
