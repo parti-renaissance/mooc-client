@@ -13,7 +13,9 @@ html {
 }
 
 .page-wrapper {
-  height: calc(100vh - 64px);
+  @include media('>=medium') {
+    height: calc(100vh - 64px - 109px);
+  }
 }
 
 .bm-menu {
@@ -23,21 +25,29 @@ html {
 
   @include media('>=medium') {
     top: 0 !important;
+    bottom: 109px !important;
+    border-right: 1px solid $lightgray;
   }
 }
 
-.ember-burger-menu.is-open {
-  @include media('<=medium') {
-    .bm-content:after {
-      content: '';
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
+@include media('<=medium') {
+  .mooc-slider.ember-burger-menu.is-open:after {
+    display: block;
+    z-index: 99;
+    content: '';
+    top: 64px;;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 
-      background-color: rgba(0, 0, 0, 0.35);
-    }
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+}
+
+@include media('>=medium') {
+  .mooc-slider.ember-burger-menu {
+    position: static;
   }
 }
 
