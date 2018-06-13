@@ -45,7 +45,16 @@
   <ul class="chapter-attachments">
     {{#each attachments as |att|}}
     <li>
-      <a href={{att.attachmentUrl}} target="_blank" download={{att.attachmentName}}>{{fa-icon 'file-pdf-o'}} {{att.attachmentName}}</a> <span>Télecharger / Partager</span>
+      <a href={{att.attachmentUrl}} target="_blank" download={{att.attachmentName}} class="chapter-attachments__label">
+        {{fa-icon 'file-pdf-o'}} {{att.attachmentName}}
+      </a>
+      <span>
+        <a href={{att.attachmentUrl}} target="_blank" download={{att.attachmentName}}>
+          Télécharger
+        </a>
+        /
+        Partager
+       </span>
     </li>
     {{/each}}
   </ul>

@@ -184,9 +184,13 @@
     font-size: 12px;
     font-weight: 300;
     color: $mediumgray;;
+
+    a {
+      color: inherit;
+    }
   }
 }
 
-.chapter-attachments li a {
+.chapter-attachments__label {
   margin-right: 75px;
 }
