@@ -1,6 +1,6 @@
 <div class="week-top">
   <h1 class="week-name">{{week.title}}</h1>
-  {{#if (is-before week.publishedAt)}}
+  {{#if (is-same-or-before week.publishedAt precision='day')}}
     <div class="week-date">{{moment-format week.publishedAt "D MMM YYYY"}}</div>
   {{/if}}
 </div>
