@@ -20,17 +20,21 @@ html {
 
 .bm-menu {
   background: white;
-  overflow-y: scroll;
   top: 64px !important;
 
   @include media('>=medium') {
+    overflow-y: scroll;
     top: 0 !important;
     bottom: 89px !important;
     border-right: 1px solid $lightgray;
   }
 }
 
-@include media('<=medium') {
+@include media('<medium') {
+  .mooc-slider.ember-burger-menu {
+    height: calc(100% + 64px);
+  }
+
   .mooc-slider.ember-burger-menu.is-open:after {
     display: block;
     z-index: 99;
