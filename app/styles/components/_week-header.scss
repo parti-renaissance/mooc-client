@@ -1,21 +1,13 @@
 @import "../mixins/vars";
 
 .week-header {
-  padding: 20px 27px;
+  padding: 30px 27px;
   background: $purple;
 }
 
 .week-top {
   display: flex;
   justify-content: space-between;
-}
-
-.week-name {
-  font-family: $font-gillsans;
-  font-size: 15px;
-  font-weight: 300;
-  letter-spacing: 1.2px;
-  color: white;
 }
 
 .week-date {
@@ -30,4 +22,24 @@
   font-family: $font-roboto;
   font-size: 16px;
   color: white;
+}
+
+.week-name {
+  color: white;
+  line-height: 16px;
+}
+
+.week-name__prefix {
+  font-family: $font-gillsans;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: block;
+}
+
+.week-name__suffix {
+  font-family: $font-roboto;
+  font-size: 16px;
+  font-weight: normal;
 }

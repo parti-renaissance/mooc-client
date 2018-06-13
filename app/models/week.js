@@ -10,6 +10,14 @@ export default DS.Model.extend({
   chapters: DS.hasMany('chapter'),
   mooc: DS.belongsTo('mooc'),
 
+  titlePrefix: computed('title', function() {
+    return this.get('title').split(' - ')[0];
+  }),
+
+  titleSuffix: computed('title', function() {
+    return this.get('title').split(' - ')[1];
+  }),
+
   nextWeek: computed('mooc.weeks', function() {
     let weeks = this.get('mooc.weeks');
     if (!weeks) {
