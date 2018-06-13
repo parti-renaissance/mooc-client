@@ -22,11 +22,11 @@ module('Integration | Component | navigate-button', function(hooks) {
     await render(hbs`{{navigate-button 'previous' chapter action=action}}`);
 
     assert.ok(find('.navigate-button'));
-    assert.equal(find('.navigate-button').textContent.trim(), 'Video précédant');
+    assert.equal(find('.navigate-button').textContent.trim(), 'Vidéo précédente');
     await click('.navigate-button');
 
     await render(hbs`{{navigate-button 'next' chapter action=action}}`);
-    assert.equal(find('.navigate-button').textContent.trim(), 'Quiz suivant');
+    assert.equal(find('.navigate-button').textContent.trim(), 'Quizz suivant');
     await click('.navigate-button');
   });
 });
