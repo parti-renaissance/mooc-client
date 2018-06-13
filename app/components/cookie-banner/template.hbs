@@ -1,0 +1,13 @@
+{{#if shouldOpen}}
+<div class="cookie-banner">
+  <div class="cookie-banner__body">
+    <p>
+      Ce site utilise des cookies — <a href="https://en-marche.fr/politique-cookies" target="_blank">En savoir plus</a>
+    </p>
+
+    <button data-test-selector="cookie-button" class="cookie-banner__button" {{action 'dismiss'}}>
+      OK
+    </button>
+  </div>
+</div>
+{{/if}}

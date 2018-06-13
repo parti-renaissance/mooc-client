@@ -1,0 +1,81 @@
+@import "../mixins/vars";
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  background-color: $yellow;
+
+  &.is-closed {
+    display: none;
+  }
+}
+
+.cookie-banner__body {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 22px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  @include media(">=470px")  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include media(">=650px") {
+    justify-content: center;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 18px;
+    line-height: 32px;
+
+    @include media(">=470px")  {
+      margin: 0;
+      flex: 1;
+      text-align: center;
+    }
+
+    @include media(">=650px") {
+      flex: none;
+      margin-right: 20px;
+    }
+  }
+
+  a {
+    display: block;
+    color: black;
+
+    @include media(">=650px")  {
+      display: inline;
+    }
+  }
+}
+
+.cookie-banner__button {
+  appearance: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-family: $font-gillsans;
+
+  background-color: white;
+  padding: 10px;
+
+  flex-basis: 150px;
+
+  @include media(">=650px")  {
+    font-size: 32px;
+    padding: 20px;
+  }
+}
