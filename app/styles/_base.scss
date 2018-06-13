@@ -14,7 +14,7 @@ html {
 
 .page-wrapper {
   @include media('>=medium') {
-    height: calc(100vh - 64px - 109px);
+    height: calc(100vh - 64px - 89px);
   }
 }
 
@@ -25,7 +25,7 @@ html {
 
   @include media('>=medium') {
     top: 0 !important;
-    bottom: 109px !important;
+    bottom: 89px !important;
     border-right: 1px solid $lightgray;
   }
 }
