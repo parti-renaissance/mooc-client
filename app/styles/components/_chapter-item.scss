@@ -97,6 +97,10 @@
   @include media('>=wide') {
     margin-right: 15px;
   }
+
+  .chapter-item.active & {
+    font-weight: bold;
+  }
 }
 
 .chapter-item__duration {
