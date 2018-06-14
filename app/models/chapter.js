@@ -13,7 +13,7 @@ export default DS.Model.extend({
   youtubeThumbnail: DS.attr('string'),
   duration: DS.attr('string'),
 
-  typeformEmbed: DS.attr('string'),
+  typeformUrl: DS.attr('string'),
 
   week: DS.belongsTo('week'),
 

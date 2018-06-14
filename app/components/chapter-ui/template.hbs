@@ -3,8 +3,8 @@
     <div class="chapter-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/{{chapter.youtubeId}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-  {{else if chapter.typeformEmbed}}
-    {{{chapter.typeformEmbed}}}
+  {{else}}
+    {{typeform-embed url=chapter.typeformUrl}}
   {{/if}}
 </div>
 
