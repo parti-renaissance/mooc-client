@@ -17,9 +17,9 @@ module.exports = function(defaults) {
   });
 
   app.import('node_modules/normalize.css/normalize.css');
-  app.import('node_modules/@typeform/embed/dist/embed.js', {
+  app.import('node_modules/@typeform/embed/lib/api.js', {
     using: [
-      {transformation: 'fastbootShim'}
+      { transformation: 'cjs', as: 'typeform' }
     ]
   });
 
