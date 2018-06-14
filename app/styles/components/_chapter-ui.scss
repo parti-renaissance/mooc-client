@@ -129,18 +129,19 @@
 
 .chapter-title {
   font-family: $font-gillsans;
-  font-size: 16px;
+  font-size: 32px;
+  line-height: 40px;
   font-weight: bold;
   letter-spacing: 0.4px;
-  color: $purple;
+  color: black;
 
   margin-bottom: 14px;
 }
 
 .chapter-description {
   font-family: $font-roboto;
-  font-size: 15px;
-  font-weight: 300;
+  color: $darkgray;
+  font-size: 16px;
   line-height: 1.4;
   color: black;
   margin-bottom: 15px;
@@ -162,8 +163,7 @@
   list-style: none;
 
   font-family: $font-roboto;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 16px;
 
   li {
     margin-bottom: 10px;
@@ -172,6 +172,10 @@
   a {
     color: $purple;
     text-decoration: none;
+
+    &:hover {
+        border-bottom: 1px solid $purple;
+    }
   }
 
   span {
@@ -179,10 +183,16 @@
     font-family: $font-roboto;
     font-size: 12px;
     font-weight: 300;
-    color: $mediumgray;;
+    color: $mediumgray;
 
-    a {
+    a,
+    .flyout-menu__trigger {
       color: inherit;
+
+      &:hover {
+          border: 0 !important;
+          color: $purple;
+      }
     }
   }
 }
@@ -192,7 +202,7 @@
 }
 
 .chapter-attachments__label {
-  margin-right: 75px;
+  margin-right: 25px;
 }
 
 .chapter-attachments__label

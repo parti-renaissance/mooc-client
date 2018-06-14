@@ -4,11 +4,10 @@
   appearance: none;
   background-color: white;
   border: 1px solid $purple;
-  font-family: $font-gillsans;
   font-size: 12px;
-  font-weight: 300;
   color: $purple;
   padding: 7.5px;
+  transition: all .2s;
 
   cursor: pointer;
 
@@ -22,6 +21,11 @@
 
   &:active {
     background-color: $lightgray;
+  }
+
+  &:hover {
+      background: $purple;
+      color: white;
   }
 
   i.previous-arrow {

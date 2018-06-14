@@ -2,7 +2,7 @@
 
 .week-header {
   padding: 30px 27px;
-  background: $purple;
+  background: $offwhite;
 }
 
 .week-top {
@@ -25,17 +25,17 @@
 }
 
 .week-name {
-  color: white;
+  color: $darkgray;
   line-height: 16px;
 }
 
 .week-name__prefix {
-  font-family: $font-gillsans;
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 12px;
+  font-weight: bold;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   display: block;
+  color: black;
 }
 
 .week-name__suffix {

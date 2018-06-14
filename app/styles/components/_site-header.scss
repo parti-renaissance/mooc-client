@@ -38,7 +38,8 @@
   font-size: 12px;
   font-weight: bold;
   font-style: italic;
-  color: $darkgray;
+  color: black;
+  letter-spacing: 0;
 
   text-decoration: none;
 
@@ -46,7 +47,6 @@
 
   @include media('>narrow') {
     font-size: 18px;
-    letter-spacing: 1.2px;
   }
 
   @include media('>=medium') {
@@ -56,8 +56,10 @@
 }
 
 .site-header__separator {
-  color: #e6ecf0;
+  color: transparent;
   margin: 0 3px;
+  width: 1px;
+  background: $lightgray;
 
   @include media('>=medium') {
     margin: 0 10px;
@@ -68,7 +70,7 @@
   font-family: $font-gillsans;
   font-size: 14px;
   font-weight: 300;
-  color: $purple;
+  color: $darkgray;
 
   @include media('>=medium') {
     letter-spacing: 1.1px;
