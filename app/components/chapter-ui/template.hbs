@@ -35,7 +35,7 @@
   <ul class="chapter-links">
     {{#each links as |link|}}
     <li>
-      <a href={{link.linkUrl}} target="_blank">{{fa-icon 'link'}} {{link.linkName}}</a>
+      <a href={{link.linkUrl}} target="_blank" class="chapter-links__label">{{fa-icon 'link'}} {{link.linkName}}</a>
     </li>
     {{/each}}
   </ul>
@@ -52,8 +52,21 @@
         <a href={{att.attachmentUrl}} target="_blank" download={{att.attachmentName}}>
           Télécharger
         </a>
-        /
-        Partager
+        <span class="attachment-separator">/</span>
+        {{#flyout-menu as |flyout|}}
+          {{#flyout.trigger}}
+            Partager
+          {{/flyout.trigger}}
+
+          {{#flyout.content}}
+            {{share-button/share 'twitter'
+              params=(hash text=att.attachmentName shareUrl=att.attachmentUrl)}}
+            {{share-button/share 'facebook'
+              params=(hash shareUrl=att.attachmentUrl)}}
+            {{share-button/share 'email'
+              params=(hash body=(concat att.attachmentName ': ' att.attachmentUrl))}}
+          {{/flyout.content}}
+        {{/flyout-menu}}
        </span>
     </li>
     {{/each}}

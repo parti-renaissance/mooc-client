@@ -174,13 +174,8 @@
     text-decoration: none;
   }
 
-  i {
-    color: $purple;
-    margin-right: 5px;
-    font-size: 12px;
-  }
-
   span {
+    display: inline-flex;
     font-family: $font-roboto;
     font-size: 12px;
     font-weight: 300;
@@ -192,6 +187,28 @@
   }
 }
 
+.attachment-separator {
+  margin: 0 5px;
+}
+
 .chapter-attachments__label {
   margin-right: 75px;
+}
+
+.chapter-attachments__label
+.chapter-links__label {
+  i {
+    color: $purple;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+}
+
+.chapter-attachments .share-button__share {
+  color: white;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
