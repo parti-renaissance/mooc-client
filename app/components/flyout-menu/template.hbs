@@ -1,0 +1,6 @@
+{{#basic-dropdown calculatePosition=calculatePosition renderInPlace=true as |dd|}}
+  {{yield (hash
+    trigger=(component dd.trigger class="flyout-menu__trigger")
+    content=(component dd.content class="flyout-menu__content")
+  )}}
+{{/basic-dropdown}}
