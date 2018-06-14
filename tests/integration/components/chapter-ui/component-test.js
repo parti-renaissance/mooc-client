@@ -2,11 +2,15 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render, find, click, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import sinon from 'sinon';
+import typeformEmbed from 'typeform';
 
 module('Integration | Component | chapter-ui', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
+    let widgetStub = sinon.stub(typeformEmbed, 'makeWidget');
+
     let chapter = {
       title: "Les produits transformés dans une première vidéo",
       slug: "les-produits-transformes-dans-une-premiere-video",
@@ -26,7 +30,7 @@ module('Integration | Component | chapter-ui', function(hooks) {
       nextChapter: {}
     };
 
-    assert.expect(12);
+    assert.expect(13);
     this.set('chapter', chapter);
 
     await render(hbs`{{chapter-ui chapter=chapter}}`);
@@ -35,13 +39,14 @@ module('Integration | Component | chapter-ui', function(hooks) {
     assert.equal(find('.chapter-video iframe').getAttribute('src'), `https://www.youtube.com/embed/${chapter.youtubeId}`, 'youtube iframe renders');
 
     delete chapter.youtubeId;
-    chapter.typeformEmbed = '<p id="embed">foo</p>';
+    chapter.typeformUrl = 'http://oksure';
 
     this.set('next', () => assert.ok('called next'));
     this.set('previous', () => assert.ok('called previous'));
     await render(hbs`{{chapter-ui chapter=chapter next=next previous=previous}}`);
-    
-    assert.equal(find('#embed').textContent.trim(), 'foo', 'typeform embed renders');
+
+    assert.ok(find('.typeform-embed'), 'typeform embed renders');
+    assert.ok(widgetStub.calledOnce, 'typeform widget is initialized');
 
     assert.ok(find('.chapter-controls__center .share-button .email'), 'share via email');
     assert.ok(find('.chapter-controls__center .share-button .twitter'), 'share via twitter');
