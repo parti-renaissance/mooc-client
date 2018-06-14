@@ -19,8 +19,8 @@ const SERVICE_MAP = {
   },
   email: {
     base: 'mailto:',
-    getParams(url, {text}) {
-      return `subject=${text}`;
+    getParams(url, {text, body}) {
+      return `subject=${text || ''}&body=${body}`;
     }
   }
 };
@@ -40,6 +40,8 @@ const Button = Component.extend({
     if (this.get('isFastBoot')) {
       let { protocol, host, path } = this.get('fastboot.request').getProperties('protocol', 'host', 'path');
       url = `${protocol}//${host}${path}`;
+    } else if (this.shareUrl) {
+      url = this.shareUrl;
     } else {
       url = window.location.toString();
     }
