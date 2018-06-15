@@ -1,6 +1,10 @@
 export default {
   "title": "Faire de sa fourchette un acte politique",
   "slug": "faire-de-sa-fourchette-un-acte-politique",
+  "content":"<p>Ceci est un MOOC sympa</p>",
+  "youtubeDuration": "00:10:56",
+  "youtubeId": "dQw4w9WgXcQ",
+  "youtubeThumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg",
   "elements": [
     {
      "type": "chapter",
@@ -23,7 +27,9 @@ export default {
       }],
       "youtubeId": "ktHEfEDhscU",
       "youtubeThumbnail": "https://img.youtube.com/vi/ktHEfEDhscU/0.jpg",
-      "duration": "00:02:10"
+      "duration": "00:02:10",
+      "emailText": "Ceci est un test",
+      "twitterText": "Ce texte pour twitter est cool",
     },
     {
       "type": "video",
@@ -34,7 +40,9 @@ export default {
       "attachments": [],
       "youtubeId": "ktHEfEDhscU",
       "youtubeThumbnail": "https://img.youtube.com/vi/ktHEfEDhscU/0.jpg",
-      "duration": "01:30:00"
+      "duration": "01:30:00",
+      "emailText": "Email text",
+      "twitterText": "Ce texte pour twitter est cool",
     },
     {
       "type": "quiz",
