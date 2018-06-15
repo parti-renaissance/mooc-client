@@ -10,8 +10,11 @@
   {{site-header toggleMenu=(action burger.state.actions.toggle)}}
 
   {{#burger.menu as |menu|}}
+    <section class="mooc-header">
+      {{chapter-item model}}
+    </section>
     {{#each model.weeks as |week|}}
-      <section>
+      <section class="mooc-weeks">
         {{week-header week}}
 
         {{#chapter-list week.chapters as |item|}}
