@@ -34,6 +34,7 @@
     justify-content: center;
   }
 
+  .chapter-item--mooc &:after,
   .chapter-item--video &:after {
     // play icon
     content: '';
