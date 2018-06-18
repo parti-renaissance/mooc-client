@@ -28,7 +28,8 @@ export default {
       "youtubeId": "ktHEfEDhscU",
       "youtubeThumbnail": "https://img.youtube.com/vi/ktHEfEDhscU/0.jpg",
       "duration": "00:02:10",
-      "emailText": "Ceci est un test",
+      "emailBody": "<p>Test d'un <strong>email</strong> de partage.</p>",
+      "emailObject": "Test",
       "twitterText": "Ce texte pour twitter est cool",
     },
     {
