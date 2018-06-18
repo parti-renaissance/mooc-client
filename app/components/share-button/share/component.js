@@ -19,8 +19,8 @@ const SERVICE_MAP = {
   },
   email: {
     base: 'mailto:',
-    getParams(url, {text, body}) {
-      return `subject=${text || ''}&body=${body}`;
+    getParams(url, {subject, body}) {
+      return `subject=${subject || ''}&body=${body || ''}`;
     }
   }
 };
