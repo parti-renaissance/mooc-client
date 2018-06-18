@@ -13,7 +13,8 @@ export default DS.Model.extend({
   youtubeThumbnail: DS.attr('string'),
   duration: DS.attr('string'),
 
-  emailText: DS.attr('string'),
+  emailObject: DS.attr('string'), // subject
+  emailBody: DS.attr('string'),
   twitterText: DS.attr('string'),
 
   typeformUrl: DS.attr('string'),
