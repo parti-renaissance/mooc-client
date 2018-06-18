@@ -70,6 +70,12 @@ export default Route.extend({
       } else {
         this.set('firstPage', false);
       }
+
+      if (!this.get('isFastBoot')) {
+        schedule('afterRender', () => {
+          document.querySelector('.bm-content').scrollTo(0, 0);
+        });
+      }
     }
   }
 
