@@ -38,7 +38,7 @@ module('Integration | Component | share-button/share', function(hooks) {
   });
 
   test('email', async function(assert) {
-    await render(hbs`{{share-button/share 'email' params=(hash text='whatever' body='ok')}}`);
+    await render(hbs`{{share-button/share 'email' params=(hash subject='whatever' body='ok')}}`);
 
     assert.ok(find('.share-button__share'));
     assert.equal(find('.share-button__share.email').getAttribute('href'), 'mailto:?subject=whatever&body=ok');
