@@ -1,4 +1,4 @@
-{{#link-to 'mooc.chapter' chapter.slug class=(concat "chapter-item chapter-item--" chapter.type)}}
+{{#link-to route chapter.slug class=(concat "chapter-item chapter-item--" chapter.type)}}
   <div class="chapter-item__thumb">
     {{#if chapter.youtubeThumbnail}}
       <div class="chapter-item__yt-thumb" style={{parsedYtThumb}}></div>

@@ -5,6 +5,7 @@ import { htmlSafe } from '@ember/string';
 
 const Item = Component.extend({
   tagName: '',
+  route: 'mooc.chapter',
 
   parsedYtThumb: computed('chapter.youtubeThumbnail', function() {
     return htmlSafe(`background-image: url(${this.chapter.youtubeThumbnail})`);
