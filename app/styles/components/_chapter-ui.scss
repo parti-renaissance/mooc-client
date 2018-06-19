@@ -148,6 +148,20 @@
   a {
     color: $purple;
     text-decoration: none;
+    transition: all .2s;
+
+    &.btn {
+      background: $red;
+      color: white;
+      padding: 5px 10px;
+      display: inline-block;
+      border: 1px solid $red;
+
+      &:hover {
+        color: $red;
+        background: transparent;
+      }
+    }
   }
 
   p {
