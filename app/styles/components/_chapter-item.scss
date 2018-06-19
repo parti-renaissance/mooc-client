@@ -95,11 +95,6 @@
 
     padding: 15px 35px;
   }
-
-  .chapter-item.active &,
-  .chapter-item:hover & {
-    border-color: rgba($purple, .5);
-  }
 }
 
 .chapter-item__title {
