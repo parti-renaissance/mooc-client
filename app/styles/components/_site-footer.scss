@@ -5,7 +5,7 @@
   background: $offwhite;
 
   font-size: 14px;
-  padding: 5px 10px;
+  padding: 30px 10px;
 }
 
 .site-footer__row,
@@ -48,9 +48,13 @@
   }
 
   > a {
-    color: black;
+    color: $darkgray;
     text-decoration: none;
     font-weight: 400;
+
+    &:hover {
+      color: black;
+    }
   }
 }
 
