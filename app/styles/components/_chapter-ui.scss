@@ -40,10 +40,9 @@
 
 .chapter-controls {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
-  flex: 1;
 
   margin-top: 20px;
   margin-bottom: 20px;
@@ -59,15 +58,11 @@
 .chapter-controls__left,
 .chapter-controls__right {
   display: flex;
+  max-width: 140px;
 
   flex-basis: 100%;
   justify-content: center;
   align-items: center;
-
-  @include media('>=medium') {
-    flex: 1;
-    flex-basis: auto;
-  }
 }
 
 .chapter-controls__right {
@@ -91,8 +86,6 @@
 
   @include media('>=medium') {
     margin: 0 10px;
-    flex-basis: auto;
-    flex: 2 2 auto;
 
     > .share-button {
       flex-wrap: wrap;
