@@ -4,7 +4,7 @@ import typeformEmbed from 'typeform';
 export default Component.extend({
   classNames: ['typeform-embed'],
 
-  didInsertElement() {
+  insertWidget() {
     this._super(...arguments);
     let url = this.url || "https://admin.typeform.com/to/cVa5IG";
     if (!url) {
@@ -16,4 +16,15 @@ export default Component.extend({
       opacity: 0
     });
   },
+
+  didUpdateAttrs() {
+    this._super(...arguments);
+    this.insertWidget();
+  },
+
+  didInsertElement() {
+    this._super(...arguments);
+    this.insertWidget();
+  },
+
 });
