@@ -36,7 +36,7 @@ module('Integration | Component | chapter-ui', function(hooks) {
     await render(hbs`{{chapter-ui chapter=chapter}}`);
 
     assert.ok(find('.chapter-ui'), 'component renders');
-    assert.equal(find('.chapter-video iframe').getAttribute('src'), `https://www.youtube.com/embed/${chapter.youtubeId}`, 'youtube iframe renders');
+    assert.equal(find('.chapter-video iframe').getAttribute('src'), `https://www.youtube.com/embed/${chapter.youtubeId}?rel=0&showinfo=0`, 'youtube iframe renders');
 
     delete chapter.youtubeId;
     chapter.typeformUrl = 'http://oksure';
