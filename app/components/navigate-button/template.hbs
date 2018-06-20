@@ -1,5 +1,5 @@
 {{#if (eq type 'previous')}}
-  {{fa-icon 'long-arrow-left' class="previous-arrow"}}{{if (eq chapter.previousChapter.type 'quiz') 'Quizz précédent' 'Vidéo précédente'}}
+  {{fa-icon 'long-arrow-left' class="previous-arrow"}}Retour
 {{else}}
-  {{if (eq chapter.nextChapter.type 'quiz') 'Quizz suivant' 'Vidéo suivante'}} {{fa-icon 'long-arrow-right' class="next-arrow"}}
+  Continuer{{fa-icon 'long-arrow-right' class="next-arrow"}}
 {{/if}}

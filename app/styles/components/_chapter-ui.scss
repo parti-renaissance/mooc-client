@@ -87,10 +87,6 @@
   flex-basis: 100%;
   margin: 15px 0;
 
-  > .share-button {
-    flex-basis: 260px;
-  }
-
   @include media('>=medium') {
     margin: 0 10px;
     flex-basis: auto;
@@ -99,13 +95,6 @@
     > .share-button {
       flex-wrap: wrap;
       justify-content: center;
-    }
-  }
-
-  @include media('>=1033px') {
-    > .share-button {
-      flex-wrap: nowrap;
-      justify-content: space-between;
     }
   }
 

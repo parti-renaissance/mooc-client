@@ -57,7 +57,7 @@
 
 .site-header__separator {
   color: transparent;
-  margin: 0 3px;
+  margin: 0 8px;
   width: 1px;
   background: $lightgray;
 
@@ -72,9 +72,16 @@
   font-weight: 300;
   color: $darkgray;
 
+  span {
+    display: none;
+  }
+
   @include media('>=medium') {
     letter-spacing: 1.1px;
     font-size: 24px;
-    display: block;
+
+    span {
+      display: contents;
+    }
   }
 }

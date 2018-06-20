@@ -28,9 +28,10 @@ export default {
       "youtubeId": "ktHEfEDhscU",
       "youtubeThumbnail": "https://img.youtube.com/vi/ktHEfEDhscU/0.jpg",
       "duration": "00:02:10",
-      "emailBody": "<p>Test d'un <strong>email</strong> de partage.</p>",
-      "emailObject": "Test",
-      "twitterText": "Ce texte pour twitter est cool",
+      "shareEmailBody": "<p>Test d'un <strong>email</strong> de partage.</p>",
+      "shareEmailSubject": "Test",
+      "shareTwitterText": "Ce texte pour twitter est cool",
+      "shareFacebookText": "Ce texte pour facebook est cool",
     },
     {
       "type": "video",
@@ -43,7 +44,8 @@ export default {
       "youtubeThumbnail": "https://img.youtube.com/vi/ktHEfEDhscU/0.jpg",
       "duration": "01:30:00",
       "emailText": "Email text",
-      "twitterText": "Ce texte pour twitter est cool",
+      "shareTwitterText": "Ce texte pour twitter est cool",
+      "shareFacebookText": "Ce texte pour facebook est cool",
     },
     {
       "type": "quiz",
