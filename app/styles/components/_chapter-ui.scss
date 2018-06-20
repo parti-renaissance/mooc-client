@@ -8,10 +8,6 @@
   max-width: 1180px;
   margin: 0 auto;
 
-  @media only screen and (min-height: 800px) and (min-width: 800px) {
-    height: 100%;
-  }
-
   @include media('>=medium') {
     padding: 40px;
   }
@@ -103,11 +99,6 @@
   box-shadow: 0 2px 25px 0 rgba(111, 128, 255, 0.07);
   border: solid 1px $lightgray;
   padding: 30px;
-
-  @include media('>=medium') {
-    overflow-y: scroll;
-    flex: 1 1 275px;
-  }
 }
 
 .chapter-title {
