@@ -54,11 +54,14 @@
 .chapter-controls__left,
 .chapter-controls__right {
   display: flex;
-  max-width: 140px;
 
   flex-basis: 100%;
   justify-content: center;
   align-items: center;
+
+  @include media('>=medium') {
+    max-width: 140px;
+  }
 }
 
 .chapter-controls__right {
