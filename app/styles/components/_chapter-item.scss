@@ -126,12 +126,16 @@
 }
 
 .chapter-item__duration {
-  font-family: $font-gillsans;
-  font-size: 15px;
-  font-weight: 300;
-  letter-spacing: 1.2px;
+  font-size: 14px;
   color: $gray;
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  i {
+    margin-right: 5px;
+  }
 
   .chapter-item.active & {
     color: white;

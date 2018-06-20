@@ -4,7 +4,7 @@
     <span class="week-name__suffix">{{week.titleSuffix}}</span>
   </h1>
   {{#if (is-same-or-before week.publishedAt precision='day')}}
-    <div class="week-date">{{moment-format week.publishedAt "D MMM YYYY"}}</div>
+    <div class="week-date">Lancement le {{moment-format week.publishedAt "D MMM YYYY"}}</div>
   {{/if}}
 </div>
 
