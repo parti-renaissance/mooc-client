@@ -1,6 +1,6 @@
 <div class="share-button__label">Plus nous serons nombreux, plus nous aurons de l'impact !</div>
 <div class="share-button__buttons">
-  {{share-button/share 'twitter' params=(hash text=chapter.twitterText)}}
-  {{share-button/share 'facebook'}}
-  {{share-button/share 'email' params=(hash body=chapter.emailBody subject=chapter.emailObject)}}
+  {{share-button/share 'twitter' params=(hash text=chapter.shareTwitterText)}}
+  {{share-button/share 'facebook' params=(hash text=chapter.shareFacebookText)}}
+  {{share-button/share 'email' params=(hash body=chapter.shareEmailBody subject=chapter.shareEmailSubject)}}
 </div>
