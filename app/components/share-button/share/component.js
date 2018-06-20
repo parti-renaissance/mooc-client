@@ -12,7 +12,7 @@ const SERVICE_MAP = {
   twitter: {
     base: 'https://twitter.com/intent/tweet',
     getParams(url, {text, via}) {
-      let params = `text=${text}&url=${url}`;
+      let params = `text=${text || ""}&url=${url}`;
       params = via ? `${params}&via=${via}` : params;
       return params;
     }
