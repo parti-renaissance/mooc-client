@@ -3,6 +3,7 @@
 .week-header {
   padding: 30px 27px;
   background: $offwhite;
+  border-bottom: 1px solid $lightgray;
 }
 
 .week-top {
@@ -15,6 +16,7 @@
   align-items: center;
   font-family: $font-gillsans;
   font-size: 14px;
+  line-height: 20px;
   color: $gray;
   font-family: $font-roboto;
 }
