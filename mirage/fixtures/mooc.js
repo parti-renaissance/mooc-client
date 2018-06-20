@@ -83,6 +83,12 @@ export default {
       "duration": "00:03:27"
     },
     {
+      "type": "chapter",
+      "title": "Semaine 2 - Vive La France",
+      "slug": "semaine-2-vive-la-france",
+      "publishedAt": "2018-06-20 00:00:00"
+    },
+    {
       "type": "quiz",
       "title": "Quiz #2",
       "slug": "quiz-2",
