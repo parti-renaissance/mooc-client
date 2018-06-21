@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import { computed } from '@ember/object';
 
 export default DS.Model.extend({
   title: DS.attr('string'),
@@ -7,7 +8,7 @@ export default DS.Model.extend({
   youtubeDuration: DS.attr('string'),
   youtubeId: DS.attr('string'),
   youtubeThumbnail: DS.attr('string'),
-  
+
   shareEmailSubject: DS.attr('string'),
   shareEmailBody: DS.attr('string'),
   shareTwitterText: DS.attr('string'),
@@ -16,5 +17,10 @@ export default DS.Model.extend({
 
   type: DS.attr('string', {defaultValue: 'mooc'}),
 
-  weeks: DS.hasMany('week')
+  weeks: DS.hasMany('week'),
+
+  nextChapter: computed('weeks', function() {
+    let week = this.weeks.firstObject;
+    return week.chapters.firstObject;
+  })
 });

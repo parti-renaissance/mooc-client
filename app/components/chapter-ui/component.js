@@ -8,10 +8,14 @@ export default Component.extend({
   router: inject(),
 
   next() {
-    this.router.transitionTo('mooc.chapter', this.chapter.nextChapter.slug);
+    let nextChapter = this.chapter.get('nextChapter');
+    let route = nextChapter.get('type') === 'mooc' ? 'mooc' : 'mooc.chapter';
+    this.router.transitionTo(route, nextChapter.get('slug'));
   },
 
   previous() {
-    this.router.transitionTo('mooc.chapter', this.chapter.previousChapter.slug);
+    let previousChapter = this.chapter.get('previousChapter');
+    let route = previousChapter.get('type') === 'mooc' ? 'mooc' : 'mooc.chapter';
+    this.router.transitionTo(route, previousChapter.get('slug'));
   }
 });

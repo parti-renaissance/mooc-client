@@ -39,7 +39,8 @@ export default DS.Model.extend({
     let prev = chapters.objectAt(position - 1);
     if (!prev) { // try last chapter of previous week
       let prevWeek = this.get('week.previousWeek');
-      return prevWeek ? prevWeek.get('chapters.lastObject') : null;
+      // if there's no previous week, go to the mooc
+      return prevWeek ? prevWeek.get('chapters.lastObject') : this.week.get('mooc');
     } else {
       return prev;
     }
