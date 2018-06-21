@@ -7,6 +7,12 @@ export default DS.Model.extend({
   youtubeDuration: DS.attr('string'),
   youtubeId: DS.attr('string'),
   youtubeThumbnail: DS.attr('string'),
+  
+  shareEmailSubject: DS.attr('string'),
+  shareEmailBody: DS.attr('string'),
+  shareTwitterText: DS.attr('string'),
+  shareFacebookText: DS.attr('string'),
+
 
   type: DS.attr('string', {defaultValue: 'mooc'}),
 
