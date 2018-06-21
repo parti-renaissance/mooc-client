@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { reads } from '@ember/object/computed';
 
@@ -31,7 +32,7 @@ const Button = Component.extend({
   fastboot: service(),
   isFastBoot: reads('fastboot.isFastBoot'),
 
-  init() {
+  url: computed('params', 'service', 'shareUrl', function() {
     this._super(...arguments);
     if (!this.service) {
       return;
@@ -45,10 +46,9 @@ const Button = Component.extend({
     } else {
       url = window.location.toString();
     }
-    let params = this.params;
-    let queryString = SERVICE_MAP[this.service].getParams(url, params);
-    this.set('url', `${SERVICE_MAP[this.service].base}?${queryString}`);
-  },
+    let queryString = SERVICE_MAP[this.service].getParams(url, this.params);
+    return `${SERVICE_MAP[this.service].base}?${queryString}`;
+  }),
 
   getPopupPosition() {
     const dualScreenLeft = screen.availLeft;
