@@ -12,6 +12,6 @@ module('Integration | Helper | encode', function(hooks) {
 
     await render(hbs`{{encode inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '%20');
+    assert.equal(this.element.textContent.trim(), '%23');
   });
 });
