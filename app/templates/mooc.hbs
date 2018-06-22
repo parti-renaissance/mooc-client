@@ -7,7 +7,10 @@
   width=(if (media 'isOpenMenu') size 320)
   as |burger|}}
 
-  {{site-header toggleMenu=(action burger.state.actions.toggle)}}
+  {{!-- "bm-menu" class prevents the menu buttton from firing two toggle events when it's open --}}
+  {{site-header
+    class="bm-menu"
+    toggleMenu=(action burger.state.actions.toggle)}}
 
   {{#burger.menu as |menu|}}
     <section class="mooc-header">
