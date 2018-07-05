@@ -42,5 +42,5 @@ module('Integration | Component | share-button/share', function(hooks) {
 
     assert.ok(find('.share-button__share'));
     assert.equal(find('.share-button__share.email').getAttribute('href'), 'mailto:?subject=whatever&body=ok');
-  })
+  });
 });

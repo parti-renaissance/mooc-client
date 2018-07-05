@@ -17,7 +17,7 @@ export default Component.extend({
       this.set('shouldOpen', false);
       let date = new Date();
       date.setFullYear(date.getFullYear() + 1);
-      document.cookie = `cookieconsent_status=dismissed; expires=${date.toString()}`
+      document.cookie = `cookieconsent_status=dismissed; expires=${date.toString()}`;
     }
   }
 });

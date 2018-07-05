@@ -21,14 +21,14 @@ module('Unit | Model | chapter', function(hooks) {
           store.createRecord('chapter', {title: 'chapter 2'}),
           store.createRecord('chapter', {title: 'chapter 3'}),
         ]
-      })
+      });
     });
     let chapter2 = store.peekAll('chapter').findBy('title', 'chapter 2');
     let chapter3 = store.peekAll('chapter').findBy('title', 'chapter 3');
 
     assert.equal(chapter2.get('nextChapter').get('title'), 'chapter 3');
     assert.equal(chapter2.get('previousChapter').get('title'), 'chapter 1');
-    assert.notOk(chapter3.get('nextChapter'), 'next chapter for final chapter is falsey')
+    assert.notOk(chapter3.get('nextChapter'), 'next chapter for final chapter is falsey');
   });
 
   test('it knows siblings across weeks', function(assert) {

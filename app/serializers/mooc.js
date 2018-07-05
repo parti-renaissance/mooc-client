@@ -25,7 +25,7 @@ export default DS.Serializer.extend({
           relationships: {
             chapters: {data: []}
           }
-        })
+        });
       } else {
         let currentWeek = weeks[weeks.length - 1];
         currentWeek.relationships.chapters.data.push({type: 'chapter', id: element.slug});
