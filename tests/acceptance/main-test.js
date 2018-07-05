@@ -12,7 +12,7 @@ module('Acceptance | main', function(hooks) {
     await visit('/mooc');
 
     assert.equal(find('.chapter-body').textContent.trim(), moocFixture.content.replace(/<[^>]+>/g, ''));
-    assert.equal(find('.chapter-video > iframe').getAttribute('src'), `https://www.youtube.com/embed/${moocFixture.youtubeId}?rel=0&showinfo=0`)
+    assert.equal(find('.chapter-video > iframe').getAttribute('src'), `https://www.youtube.com/embed/${moocFixture.youtubeId}?rel=0&showinfo=0`);
 
     await click('.chapter-list li:nth-child(2) a');
 

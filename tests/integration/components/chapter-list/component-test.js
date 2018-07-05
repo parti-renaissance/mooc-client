@@ -7,7 +7,7 @@ module('Integration | Component | chapter-list', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    this.set('chapters', [1, 2, 3])
+    this.set('chapters', [1, 2, 3]);
     await render(hbs`{{chapter-list chapters}}`);
 
     assert.ok(find('.chapter-list'));

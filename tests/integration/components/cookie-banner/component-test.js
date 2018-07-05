@@ -21,7 +21,7 @@ module('Integration | Component | cookie-banner', function(hooks) {
 
     await render(hbs`{{cookie-banner}}`);
     assert.notOk(this.element.querySelector('.cookie-banner'), 'should be closed if cookie is set');
-  })
+  });
 
   test('dismissing should set the cookie', async function(assert) {
     await render(hbs`{{cookie-banner}}`);

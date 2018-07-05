@@ -21,7 +21,7 @@ export default Route.extend({
   title(tokens = []) {
     let prefix;
     if (tokens.length) {
-      prefix = `${tokens[0]}, ${this.currentModel.get('title')}`
+      prefix = `${tokens[0]}, ${this.currentModel.get('title')}`;
     } else {
       prefix = this.currentModel.get('title');
     }

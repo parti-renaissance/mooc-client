@@ -22,7 +22,7 @@ let server = new FastBootAppServer({
   beforeMiddleware(app) {
     app.use((req, res, next) => {
       if (req.headers['user-agent'].indexOf('GoogleHC') >= 0) {
-        return res.sendStatus(200)
+        return res.sendStatus(200);
       }
       return next();
     });

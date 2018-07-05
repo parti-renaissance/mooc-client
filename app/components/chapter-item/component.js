@@ -31,6 +31,6 @@ const Item = Component.extend({
 
 Item.reopenClass({
   positionalParams: ['chapter']
-})
+});
 
 export default Item;
