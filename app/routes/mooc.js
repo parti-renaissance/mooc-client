@@ -43,8 +43,8 @@ export default Route.extend({
     let url;
 
     if (this.get('isFastBoot')) {
-      let { protocol, host, path } = this.get('fastboot.request').getProperties('protocol', 'host', 'path');
-      url = `${protocol}//${host}${path}`;
+      let { host, path } = this.get('fastboot.request').getProperties('host', 'path');
+      url = `https://${host}${path}`;
     } else {
       url = window.location.toString();
     }
