@@ -1,7 +1,19 @@
 import DS from 'ember-data';
 
 export default DS.Serializer.extend({
-  normalizeResponse(store, klass, payload, id) {
+  normalizeFindAllResponse(store, klass, payload = []) {
+    return {
+      data: payload.map(mooc => {
+        return {
+          type: 'mooc',
+          id: mooc.slug,
+          attributes: mooc
+        };
+      })
+    };
+  },
+
+  normalizeFindRecordResponse(store, klass, payload, id) {
     let { elements } = payload;
     delete payload.elements;
 
