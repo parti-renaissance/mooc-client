@@ -33,7 +33,7 @@ module('Unit | Serializer | mooc', function(hooks) {
         slug: 'chapter-four'
       }]
     };
-    let jsonDoc = serializer.normalizeResponse(store, null, response, 'foo');
+    let jsonDoc = serializer.normalizeResponse(store, null, response, 'foo', 'findRecord');
 
     assert.equal(jsonDoc.data.relationships.weeks.data.length, 2, 'weeks are split out');
     assert.equal(jsonDoc.included.length, 6, 'all elements wind up included');
