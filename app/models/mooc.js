@@ -3,6 +3,7 @@ import { computed } from '@ember/object';
 
 export default DS.Model.extend({
   title: DS.attr('string'),
+  image: DS.attr('string'), // index page thumbnail
   slug: DS.attr('string'),
   content: DS.attr('string'),
   youtubeDuration: DS.attr('string'),
