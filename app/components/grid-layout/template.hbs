@@ -1,0 +1,9 @@
+{{#each items as |item|}}
+  <div class="grid-layout__cell">
+    {{yield item}}
+  </div>
+{{else}}
+  <div class="grid-layout__empty-cell">
+    {{empty}}
+  </div>
+{{/each}}
