@@ -1,26 +1,24 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, find, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | grid-layout', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`{{grid-layout}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.ok(find('.grid-layout'));
 
+    this.set('items', ['foo', 'bar', 'baz']);
     // Template block usage:
     await render(hbs`
-      {{#grid-layout}}
-        template block text
+      {{#grid-layout items=items as |item|}}
+        {{item}}
       {{/grid-layout}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(findAll('.grid-layout__cell').length, 3);
   });
 });
