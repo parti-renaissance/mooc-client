@@ -1,0 +1,40 @@
+.mooc-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid $lightgray;
+
+  box-shadow: 0 0 10px 0 rgba($lightgray, 0);
+
+  text-decoration: none;
+  text-align: center;
+  color: black;
+
+  transition: all 125ms ease-in;
+
+  &:hover {
+    border: 1px solid $purple;
+    box-shadow: 0 0 10px 0 rgba($lightgray, 1);
+  }
+}
+
+.mooc-card__title {
+  align-self: flex-end;
+  color : black;
+  font-family: $font-gillsans;
+  font-size: 14px;
+  font-weight: 100;
+
+  margin: 0;
+
+  @include media(">=medium") {
+    font-size: 20px;
+  }
+}
+
+.mooc-card__icon {
+  margin-bottom: 10px;
+  flex-basis: 100%;
+}
