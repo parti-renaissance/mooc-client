@@ -1,0 +1,11 @@
+<div class="index-header">
+  <a href="https://en-marche.fr" target="_blank">
+    {{svg-icon icon="logo" class="em-logo"}}
+  </a>
+</div>
+
+<main class="mooc-list">
+  {{#grid-layout class="index-grid" items=sorted as |item|}}
+    {{mooc-card item=item}}
+  {{/grid-layout}}
+</main>

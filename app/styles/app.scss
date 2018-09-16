@@ -6,6 +6,8 @@ $breakpoints: (narrow: 320px, medium: 768px, wide: 1300px);
 
 @import "base";
 
+@import "routes/index";
+
 @import "components/site-header";
 @import "components/week-header";
 @import "components/chapter-list";
