@@ -4,6 +4,8 @@ import { inject } from '@ember/service';
 import { reads } from '@ember/object/computed';
 import { schedule } from '@ember/runloop';
 
+const META_DESCRIPTION = title => `Ce chapitre est l'un des éléments du cours ${title}, un MOOC gratuit et accessible à tous, proposé par La République En Marche !`;
+
 function measure(controller) {
   let width = window.innerWidth;
   if (width >= 1300) {
@@ -40,18 +42,10 @@ export default Route.extend({
   },
   afterModel(model) {
     this._super(...arguments);
-    let url;
 
-    if (this.get('isFastBoot')) {
-      let { host, path } = this.get('fastboot.request').getProperties('host', 'path');
-      url = `https://${host}${path}`;
-    } else {
-      url = window.location.toString();
-    }
-
-    this.get('head').setProperties({
-      url,
-      moocTitle: model.get('title')
+    this.head.setProperties({
+      moocTitle: model.get('title'),
+      description: META_DESCRIPTION(model.title),
     });
   },
 

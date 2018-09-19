@@ -17,7 +17,7 @@ export default Route.extend({
     this._super(...arguments);
 
     this.get('head').setProperties({
-      chapterTitle: model.get('title'),
+      chapterTitle: `${model.title} | LaREM`,
       image: model.get('youtubeThumbnail')
     });
   }
