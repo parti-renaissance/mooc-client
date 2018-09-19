@@ -7,7 +7,8 @@ module('Integration | Component | mooc-card', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    await render(hbs`{{mooc-card}}`);
+    this.set('item', {});
+    await render(hbs`{{mooc-card item=item}}`);
 
     assert.ok(this.element.querySelector('.mooc-card'));
   });
