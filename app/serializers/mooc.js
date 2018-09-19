@@ -16,7 +16,12 @@ export default DS.Serializer.extend({
         return {
           type: 'mooc',
           id: mooc.slug,
-          attributes: mooc
+          attributes: Object
+                        .keys(mooc)
+                        .reduce((attrs, key) => {
+                          attrs[key.camelize()] = mooc[key];
+                          return attrs;
+                        }, {})
         };
       })
     };

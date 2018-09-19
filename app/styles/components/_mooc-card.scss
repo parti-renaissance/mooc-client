@@ -5,6 +5,9 @@
 
   box-shadow: 0 0 10px 0 rgba($lightgray, 0);
 
+  color : black;
+  font-family: $font-gillsans;
+  font-weight: 100;
   text-decoration: none;
   text-align: center;
   color: black;
@@ -18,11 +21,7 @@
 }
 
 .mooc-card__title {
-  color : black;
-  font-family: $font-gillsans;
   font-size: 14px;
-  font-weight: 100;
-
   margin: 0;
   margin-bottom: 4px;
 
@@ -32,11 +31,17 @@
 }
 
 .mooc-card__summary {
-  color : black;
-  font-family: $font-gillsans;
   font-size: 12px;
-  font-weight: 100;
 
+  margin: 0;
+
+  @include media(">=medium") {
+    font-size: 16px;
+  }
+}
+
+.mooc-card__count {
+  font-size: 12px;
   margin: 0;
 
   @include media(">=medium") {
