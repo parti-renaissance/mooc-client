@@ -31,6 +31,7 @@
   a {
     padding: 25px;
     fill: $purple;
+    position: relative; // stack above the translucent overlay
   }
 
   .em-logo {
