@@ -1,6 +1,13 @@
 import DS from 'ember-data';
 
 export default DS.Serializer.extend({
+  normalizeAttributes(attributes) {
+    return Object.keys(attributes).reduce((attrs, key) => {
+      attrs[key.camelize()] = attributes[key];
+      return attrs;
+    }, {});
+  },
+
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
     switch(requestType) {
       case 'findAll':
@@ -16,12 +23,7 @@ export default DS.Serializer.extend({
         return {
           type: 'mooc',
           id: mooc.slug,
-          attributes: Object
-                        .keys(mooc)
-                        .reduce((attrs, key) => {
-                          attrs[key.camelize()] = mooc[key];
-                          return attrs;
-                        }, {})
+          attributes: this.normalizeAttributes(mooc),
         };
       })
     };
@@ -34,7 +36,7 @@ export default DS.Serializer.extend({
     let data = {
       id,
       type: 'mooc',
-      attributes: payload,
+      attributes: this.normalizeAttributes(payload),
       relationships: {
         weeks: {data: []}
       }
@@ -47,7 +49,7 @@ export default DS.Serializer.extend({
         weeks.push({
           type: 'week',
           id: element.slug,
-          attributes: element,
+          attributes: this.normalizeAttributes(element),
           relationships: {
             chapters: {data: []}
           }
@@ -58,7 +60,7 @@ export default DS.Serializer.extend({
         chapters.push({
           type: 'chapter',
           id: element.slug,
-          attributes: element
+          attributes: this.normalizeAttributes(element),
         });
       }
     });
