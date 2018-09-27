@@ -49,9 +49,11 @@ jobs:
             echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
             export GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcloud-service-key.json
             if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+              echo "Sitemap: https://staging.en-marche.fr/api/mooc/sitemap.xml" >> public/robots.txt
               env | sed -n 's/^DEMO_//p' > .env
               npx ember deploy demo --verbose --activate
             elif grep -q "v[0-9]\+\.[0-9]\+\.[0-9]\+" <<< "$CIRCLE_TAG"; then
+              echo "Sitemap: https://en-marche.fr/api/mooc/sitemap.xml" >> public/robots.txt
               env | sed -n 's/^PROD_//p' > .env
               npx ember deploy production --verbose --activate
             fi
