@@ -5,6 +5,9 @@
 </div>
 
 <main class="mooc-list">
+  <h1 class="mooc-list__header">Découvrez les MOOC de La République En Marche !</h1>
+  <p class="mooc-list__blurb">Ces MOOC ("Massive Open Online Courses") sont des formations collectives créées par les équipes de LaREM et accessibles gratuitement en ligne.</p>
+  
   {{#grid-layout class="index-grid" items=sorted as |item|}}
     {{mooc-card item=item}}
   {{/grid-layout}}

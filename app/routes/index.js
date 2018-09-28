@@ -2,7 +2,7 @@ import Route from '@ember/routing/route';
 import { inject } from '@ember/service';
 import { reads } from '@ember/object/computed';
 
-const META_DESCRIPTION = "Ces MOOC (\"Massive Open Online Courses\") sont des formations collectives créées par les équipes de LaREM et accessibles gratuitement en ligne.";
+const META_DESCRIPTION = "Découvrez les MOOC de La République En Marche ! Entièrement gratuits, les MOOC (ou Massive Open Online Course) sont des cours accessibles en ligne créés par LaREM à destination de tous ceux qui veulent approfondir leurs compétences citoyennes.";
 
 export default Route.extend({
   head: inject('head-data'),
@@ -19,7 +19,6 @@ export default Route.extend({
 
   afterModel() {
     this.head.setProperties({
-      title: 'Découvrez les MOOC de La République En Marche !',
       description: META_DESCRIPTION,
       chapterTitle: "MOOC de La République En Marche !",
       image: 'https://storage.googleapis.com/en-marche-fr/E-MAILING/2017/images/REM/Logo-LREM-noir.jpg',

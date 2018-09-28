@@ -52,4 +52,28 @@
   padding: 0 25px;
   max-width: 1250px;
   margin: 0 auto;
+
+  &__header {
+    text-align: center;
+
+    color: #24D28E;
+
+    font-family: $font-gillsans;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -.5px;
+
+    margin-bottom: 15px;
+
+    @include media(">=medium") {
+      font-size: 34px;
+      line-height: 38px;
+    }
+   }
+
+   &__blurb {
+     text-align: center;
+     margin-top: 0;
+     margin-bottom: 24px;
+   }
 }
