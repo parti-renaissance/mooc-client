@@ -21,12 +21,8 @@ export default Route.extend({
   isFastBoot: reads('fastboot.isFastBoot'),
 
   title(tokens = []) {
-    let prefix;
-    if (tokens.length) {
-      prefix = `${tokens[0]}, ${this.currentModel.get('title')}`;
-    } else {
-      prefix = this.currentModel.get('title');
-    }
+    const prefix = tokens.length ? tokens[0] : this.currentModel.get('title');
+
     return `${prefix}, MOOC de La République En Marche !`;
   },
 

@@ -23,11 +23,14 @@
 
 <script type="application/ld+json">
   {
-      "@context": "http://schema.org",
-      "@type": "WebSite",
-      "url": "",
-      "name": "MOOC de La République En Marche !",
-      "image": "https://storage.googleapis.com/en-marche-fr/E-MAILING/2017/images/REM/Logo-LREM-noir.jpg",
-      "description": "Découvrez les MOOC de La République En Marche ! Entièrement gratuits, les MOOC (ou Massive Open Online Course) sont des cours accessibles en ligne créés par LaREM à destination de tous ceux qui veulent approfondir leurs compétences citoyennes."
+    "@context": "http://schema.org",
+    "@type": "Course",
+    "name": "{{model.title}}",
+    "description": "{{model.description}}",
+    "provider": {
+      "@type": "Organization",
+      "name": "La République En Marche !",
+      "sameAs": "https://en-marche.fr"
+    }
   }
 </script>
