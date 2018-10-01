@@ -69,11 +69,18 @@
       font-size: 34px;
       line-height: 38px;
     }
-   }
+  }
 
-   &__blurb {
-     text-align: center;
-     margin-top: 0;
-     margin-bottom: 24px;
-   }
+  &__blurb {
+    text-align: center;
+    margin: 0px;
+  }
+
+  &__info {
+    text-align: center;
+    font-size: 11px;
+    font-style: italic;
+    color: $mediumgray;
+    margin: 5px 0 24px;
+  }
 }
