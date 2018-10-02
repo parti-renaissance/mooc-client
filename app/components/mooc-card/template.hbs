@@ -3,15 +3,18 @@
     <img src={{item.image}} />
   </div>
 
-  <p class="mooc-card__title">
-    {{item.title}}
-  </p>
+  <div class="mooc-card__content">
 
-  <p class="mooc-card__summary">
-    {{item.description}}
-  </p>
+      <p class="title">
+        {{item.title}}
+      </p>
 
-  <p class="mooc-card__count">
-    <em>Durée : {{weeks}}</em>
-  </p>
+      <p class="summary">
+        {{item.description}}
+      </p>
+
+      <p class="count">
+        Durée : {{weeks}}
+      </p>
+  </div>
 {{/link-to}}
