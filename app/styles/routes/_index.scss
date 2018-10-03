@@ -48,6 +48,16 @@
   }
 }
 
+.mooc-homepage ul.flex-list {
+  li {
+    width: 30%;
+
+    @include media('<=medium') {
+      width: 100%;
+    }
+  }
+}
+
 .mooc-list {
   padding: 0 25px;
   max-width: 1250px;
@@ -55,14 +65,10 @@
 
   &__header {
     text-align: center;
-
-    color: #24D28E;
-
     font-family: $font-gillsans;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: -.5px;
-
     margin-bottom: 15px;
 
     @include media(">=medium") {
@@ -73,7 +79,7 @@
 
   &__blurb {
     text-align: center;
-    margin: 0px;
+    margin: 0;
   }
 
   &__info {

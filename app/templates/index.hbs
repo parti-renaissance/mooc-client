@@ -9,9 +9,9 @@
   <p class="mooc-list__blurb">Ces "MOOC*" sont des formations en ligne, gratuites, accessibles à tous.</p>
   <p class="mooc-list__info">*MOOC = "Massive Open Online Courses" qui se traduit par "cours en ligne ouvert et massif"</p>
 
-  {{#grid-layout class="index-grid" items=sorted as |item|}}
-    {{mooc-card item=item}}
-  {{/grid-layout}}
+  {{#flex-layout class="mooc-homepage" items=sorted as |item|}}
+       <li>{{mooc-card item=item}}</li>
+  {{/flex-layout}}
 </main>
 
 {{site-footer}}
