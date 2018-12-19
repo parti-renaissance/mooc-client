@@ -8,11 +8,12 @@
   text-decoration: none;
   color: black;
   transition: all 125ms ease-in;
+  background-color: white;
 
   &:hover {
     box-shadow: 10px 10px 47px 0 rgba($lightgray, 1);
     transform: translateY(-4px);
-    border-bottom-color: #24D28E;
+    
   }
 
   &:after {
@@ -22,9 +23,6 @@
     left: 0;
     height: 100%;
     width: 100%;
-
-    border: 1px solid $lightgray;
-
     z-index: 0;
 
   }
@@ -35,7 +33,7 @@
   &--title {
     font-size: 14px;
     font-weight: bold;
-    margin: 5px 0 5px;
+    margin: 20px 0 10px;
     padding: 0 15px 2px;
 
     @include media(">=medium") {
@@ -47,7 +45,7 @@
     display: flex;
     font-size: 14px;
     padding: 0 15px 0;
-    margin: 0 0 40px;
+    margin: 0 0 70px;
 
     @include media(">=medium") {
       font-size: 16px;
@@ -60,10 +58,28 @@
     right: 0;
     font-size: 12px;
     margin: 0;
-    padding: 10px 15px;
+    padding: 10px 20px;
 
     @include media(">=medium") {
       font-size: 14px;
     }
+  }
+}
+
+.mooc-incoming {
+  background-color: #212121;
+  color: white;
+  padding: 90px 60px;
+  width: 46.7%;
+  list-style: none;
+  text-align: center;
+  font-family: "Gillsans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 0 20px;
+
+  @include media("<=medium") {
+    width: 100%;
+    margin: 0;
   }
 }
