@@ -1,7 +1,7 @@
 @import "mixins/fonts";
 @import "mixins/vars";
 
-$breakpoints: (narrow: 320px, medium: 768px, wide: 1300px, extra-large: 1500px);
+$breakpoints: (narrow: 320px, medium: 768px, wide: 1300px);
 @import "_include-media";
 
 @import "base";
