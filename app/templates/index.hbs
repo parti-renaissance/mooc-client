@@ -1,17 +1,21 @@
-<div class="index-header">
-  <a href="https://en-marche.fr" target="_blank">
-    {{svg-icon icon="logo" class="em-logo"}}
-  </a>
+<div class="index-bkg">
+  <div class="index-header">
+  </div>
+
+  <main class="mooc-list">
+    <h1 class="mooc-list__header">Découvrez les formations en ligne de La République En Marche !</h1>
+    <p class="mooc-list__blurb">Ces formations en ligne sont gratuites et accessibles à tous.</p>
+
+    {{#flex-layout class="mooc-homepage" items=sorted as |item|}}
+    <li>{{mooc-card item=item}}</li>
+    {{/flex-layout}}
+
+    <li class="mooc-incoming">
+      D'autres formations en ligne arrivent
+    </li>
+
+  </main>
+
 </div>
-
-<main class="mooc-list">
-  <h1 class="mooc-list__header">Découvrez les MOOC* de La République En Marche !</h1>
-  <p class="mooc-list__blurb">Ces "MOOC*" sont des formations en ligne, gratuites, accessibles à tous.</p>
-  <p class="mooc-list__info">*MOOC = "Massive Open Online Courses" qui se traduit par "cours en ligne ouvert et massif"</p>
-
-  {{#flex-layout class="mooc-homepage" items=sorted as |item|}}
-       <li>{{mooc-card item=item}}</li>
-  {{/flex-layout}}
-</main>
 
 {{site-footer}}

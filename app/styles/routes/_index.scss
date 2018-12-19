@@ -1,93 +1,104 @@
-.index-header {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-
-  margin-bottom: 10px;
-
-  height: 150px;
-
-
-  &:before {
-    content: '';
-    background: url('/assets/images/mooc_bkg.jpg') 50% 80% / cover no-repeat;
-
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
-    z-index: 0;
-
-    transform: rotate(180deg);
-  }
-
-  @include media(">=medium") {
-    height: 400px;
-    margin-bottom: 60px;
-  }
-
-  a {
-    padding: 25px;
-    fill: #24D28E;
-    position: relative; // stack above the translucent overlay
-  }
-
-  .em-logo {
-    width: 130px;
-
-    @include media(">=medium") {
-      width: 200px;
-    }
-  }
-
-  @include media("<=medium") {
+.index {
+  &-header {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     margin-bottom: 10px;
-  }
-}
-
-.mooc-homepage.flex-layout ul.flex-list {
-  li {
-    width: 30%;
-
-    @include media('<=medium') {
+    height: 150px;
+  
+    &:before {
+      content: '';
+      background: url('/assets/images/mooc_bkg.png') 50% 80% / cover no-repeat;
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 100%;
-      padding: 0;
+      height: 100%;
+      z-index: 0;
+    }
+  
+    @media screen and (min-width: 2000px)  {
+      height: 650px;
+    }
+
+    @media (min-width: 1500px) and (max-width: 2000px) {
+      height: 500px;
+    }
+  
+    @media (min-width: 1200px) and (max-width: 1500px) {
+      height: 400px;
+    }
+
+    @media (min-width: 900px) and (max-width: 1200px) {
+      height: 300px;
+    }
+
+    @media (min-width: 768px) and (max-width: 900px) {
+      height: 200px;
+    }
+
+    @media screen and (max-width: 460px) {
+      height: 100px;
+    }
+  }
+
+  &-bkg {
+    background-color: #FAFAFA;
+    padding-bottom: 30px; 
+  }
+}
+
+.mooc {
+  &-homepage.flex-layout ul.flex-list {
+    li {
+      width: 50%;
+  
+      @include media('<=medium') {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  &-list {
+    padding: 0 25px;
+    max-width: 1250px;
+    margin: 0 auto;
+  
+    &__header {
+      text-align: center;
+      font-family: $font-gillsans;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: -.5px;
+      margin-bottom: 15px;
+  
+      @include media(">=medium") {
+        font-size: 34px;
+        line-height: 38px;
+      }
+    }
+  
+    &__blurb {
+      font-family: $font-gillsans;
+      text-align: center;
+      font-size: 20px;
+      margin: 0 0 70px 0;
+
+      @include media("<=wide") {
+        margin: 0 0 40px 0;
+      }
+    }
+  
+    &__info {
+      text-align: center;
+      font-size: 11px;
+      font-style: italic;
+      color: $mediumgray;
+      margin: 5px 0 24px;
     }
   }
 }
 
-.mooc-list {
-  padding: 0 25px;
-  max-width: 1250px;
-  margin: 0 auto;
 
-  &__header {
-    text-align: center;
-    font-family: $font-gillsans;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: -.5px;
-    margin-bottom: 15px;
-
-    @include media(">=medium") {
-      font-size: 34px;
-      line-height: 38px;
-    }
-  }
-
-  &__blurb {
-    text-align: center;
-    margin: 0;
-  }
-
-  &__info {
-    text-align: center;
-    font-size: 11px;
-    font-style: italic;
-    color: $mediumgray;
-    margin: 5px 0 24px;
-  }
-}
