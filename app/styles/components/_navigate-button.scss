@@ -1,38 +1,5 @@
 @import "../mixins/vars";
 
 .navigate-button {
-  appearance: none;
-  background-color: white;
-  border: 1px solid $purple;
-  font-size: 12px;
-  color: $purple;
-  padding: 7.5px;
-  transition: all .2s;
-
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-
-  @include media('>=medium') {
-    padding: 15px;
-    font-size: 15px;
-  }
-
-  &:active {
-    background-color: $lightgray;
-  }
-
-  &:hover {
-      background: $purple;
-      color: white;
-  }
-
-  i.previous-arrow {
-    margin-right: 20px;
-  }
-
-  i.next-arrow {
-    margin-left: 20px;
-  }
+  @include button;
 }
