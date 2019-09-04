@@ -1,0 +1,44 @@
+@mixin button(
+  $display: flex,
+  $backgrond-color: white,
+  $align-items: center,
+  $border: 1px solid $purple,
+  $font-size: 15px,
+  $color: $purple,
+  $padding: 14px,
+  $text-align: center,
+  $justify-content: center,
+
+) {
+    appearance: none;
+    cursor: pointer;
+
+    display: $display;
+    align-items: $align-items;
+    background-color: $backgrond-color;
+    border: $border;
+    font-size: $font-size;
+    color: $color;
+    padding: $padding;
+    text-align: $text-align;
+    justify-content : $justify-content;
+
+    transition: all .2s;
+
+    &:active {
+      background-color: $lightgray;
+    }
+
+    &:hover {
+        background: $purple;
+        color: white;
+    }
+
+    i.previous-arrow {
+      margin-right: 20px;
+    }
+
+    i.next-arrow {
+      margin-left: 20px;
+    }
+}

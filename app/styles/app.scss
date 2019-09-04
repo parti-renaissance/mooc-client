@@ -1,5 +1,6 @@
 @import "mixins/fonts";
 @import "mixins/vars";
+@import "mixins/buttons";
 
 $breakpoints: (narrow: 320px, medium: 768px, wide: 1300px);
 @import "_include-media";
