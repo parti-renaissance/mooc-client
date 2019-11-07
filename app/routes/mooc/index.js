@@ -18,7 +18,7 @@ export default Route.extend({
 
     this.get('head').setProperties({
       chapterTitle: model.get('title'),
-      image: model.get('youtubeThumbnail')
+      image: model.get('articleImage') || model.get('youtubeThumbnail')
     });
   }
 });

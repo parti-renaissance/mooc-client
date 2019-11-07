@@ -4,6 +4,7 @@ import { computed } from '@ember/object';
 export default DS.Model.extend({
   title: DS.attr('string'),
   image: DS.attr('string'), // index page thumbnail
+  articleImage: DS.attr('string'), // index page thumbnail
   description: DS.attr('string'), // index page summary
   chapterCount: DS.attr('number'), // index page week count
   slug: DS.attr('string'),
@@ -16,7 +17,6 @@ export default DS.Model.extend({
   shareEmailBody: DS.attr('string'),
   shareTwitterText: DS.attr('string'),
   shareFacebookText: DS.attr('string'),
-
 
   type: DS.attr('string', {defaultValue: 'mooc'}),
 

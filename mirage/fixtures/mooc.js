@@ -4,6 +4,7 @@ export default {
   "content": "<p>Pour une alimentation plus saine, plus durable et qui rémunère nos agriculteurs décemment, mobilisons-nous !</p>",
   "youtubeId": "_PoGtpgh9Bw",
   "youtubeThumbnail": "https://img.youtube.com/vi/_PoGtpgh9Bw/0.jpg",
+  "articleImage": "https://img.youtube.com/vi/_PoGtpgh9Bw/0.jpg",
   "youtubeDuration": "00:00:48",
   "elements": [{
       "type": "chapter",
