@@ -17,6 +17,15 @@
   max-width: 720px;
   margin: 0 auto;
   width: 100%;
+
+  .chapter-image {
+    text-align: center;
+
+    img {
+      max-width: 560px;
+      max-height: 315px;
+    }
+  }
 }
 
 .chapter-video {
