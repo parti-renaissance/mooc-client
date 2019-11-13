@@ -57,52 +57,6 @@ jobs:
               env | sed -n 's/^PROD_//p' > .env
               npx ember deploy production --verbose --activate
             fi
-  deploy-fastboot:
-    docker:
-      - image: circleci/node:8.7
-    environment:
-        GCR_PROJECT_NAME: mooc-front
-    steps:
-      - checkout
-      - run:
-          name: "[install] install GCloud SDK"
-          command: |
-              curl -sSL https://sdk.cloud.google.com > /tmp/gcl && bash /tmp/gcl --disable-prompts
-              ~/google-cloud-sdk/install.sh --usage-reporting=false --path-update=true --bash-completion=true --rc-path=~/.bashrc --additional-components kubectl
-              sudo ln -s ~/google-cloud-sdk/bin/gcloud /usr/bin
-              sudo ln -s ~/google-cloud-sdk/bin/kubectl /usr/bin
-      - setup_remote_docker:
-            docker_layer_caching: true
-      - run:
-          name: "[docker] prepare ENV vars"
-          command: |
-              if [[ $CIRCLE_TAG ]]; then
-                  GCR_IMAGE_TAG_PREFIX=$CIRCLE_TAG
-                  GCLOUD_ENV_NAME=$GCR_PROJECT_NAME
-              else
-                  GCR_IMAGE_TAG_PREFIX=$CIRCLE_BRANCH
-                  GCLOUD_ENV_NAME="staging-${GCR_PROJECT_NAME}"
-              fi
-              echo "export GCR_IMAGE_TAG_PREFIX=${GCR_IMAGE_TAG_PREFIX}" > /tmp/env_var
-              echo "export GCLOUD_ENV_NAME=${GCLOUD_ENV_NAME}" >> /tmp/env_var
-      - run:
-          name: "[docker] build Docker image"
-          command: |
-              source /tmp/env_var
-              docker build --compress --tag eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1} .
-      - run:
-          name: "[gcloud] push Docker image"
-          command: |
-              source /tmp/env_var
-              echo "${GCLOUD_SERVICE_KEY}" | base64 --decode > $HOME/gcloud-service-key.json
-              gcloud auth activate-service-account --key-file $HOME/gcloud-service-key.json
-              gcloud config set project $GCLOUD_PROJECT
-      - run:
-          name: "[gcloud] deploy"
-          command: |
-              source /tmp/env_var
-              gcloud docker -- push eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1}
-              gcloud container images add-tag eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-${CIRCLE_SHA1} eu.gcr.io/$GCLOUD_PROJECT/$GCR_PROJECT_NAME:${GCR_IMAGE_TAG_PREFIX}-default
 workflows:
   version: 2
   install-test-deploy:
@@ -118,14 +72,6 @@ workflows:
           requires:
             - install-static
       - deploy-static:
-          requires:
-            - test-static
-          filters:
-            tags:
-              only: /^v[0-9]+\.[0-9]+\.[0-9]+/
-            branches:
-              only: master
-      - deploy-fastboot:
           requires:
             - test-static
           filters:
