@@ -19,6 +19,7 @@ export default DS.Model.extend({
   shareFacebookText: DS.attr('string'),
 
   typeformUrl: DS.attr('string'),
+  image: DS.attr('string'),
 
   week: DS.belongsTo('week'),
 
