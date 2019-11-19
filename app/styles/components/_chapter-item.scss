@@ -17,6 +17,8 @@
 }
 
 .chapter-item__thumb {
+  display: flex;
+  align-items: center;
   position: relative;
   min-height: 65px;
   flex-basis: 95px;

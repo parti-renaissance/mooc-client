@@ -1,8 +1,16 @@
 {{#link-to route chapter.slug class=(concat "chapter-item chapter-item--" chapter.type)}}
   <div class="chapter-item__thumb">
-    {{#if chapter.youtubeThumbnail}}
+    {{#if (eq chapter.type "mooc")}}
+      {{#if chapter.articleImage}}
+        <img src={{chapter.articleImage}} alt="image" />
+      {{else if parsedYtThumb}}
+        <div class="chapter-item__yt-thumb" style={{parsedYtThumb}}></div>
+      {{/if}}
+    {{else if (eq chapter.type "video")}}
       <div class="chapter-item__yt-thumb" style={{parsedYtThumb}}></div>
-    {{else}}
+    {{else if (eq chapter.type "image")}}
+      <img src={{chapter.image}} alt="image" />
+    {{else if (eq chapter.type "quiz")}}
       <div class="chapter-item__quiz-thumb">
         {{fa-icon 'check'}}
       </div>

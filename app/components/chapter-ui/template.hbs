@@ -1,15 +1,19 @@
 <div class="chapter-embed">
-    <h1 class="chapter-title">{{chapter.title}}</h1>
+  <h1 class="chapter-title">{{chapter.title}}</h1>
 
-  {{#if chapter.articleImage}}
+  {{#if (and (eq chapter.type "mooc") chapter.articleImage)}}
     <div class="chapter-image">
       <img src="{{chapter.articleImage}}"/>
     </div>
+  {{else if (and (eq chapter.type "image") chapter.image)}}
+      <div class="chapter-image">
+          <img src="{{chapter.image}}"/>
+      </div>
   {{else if chapter.youtubeId}}
     <div class="chapter-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/{{chapter.youtubeId}}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-  {{else}}
+  {{else if chapter.typeformUrl}}
     {{typeform-embed url=chapter.typeformUrl}}
   {{/if}}
 </div>
