@@ -37,8 +37,7 @@
     justify-content: center;
   }
 
-  .chapter-item--mooc &:after,
-  .chapter-item--video &:after {
+  .chapter-item__yt-thumb:after {
     // play icon
     content: '';
     position: absolute;
