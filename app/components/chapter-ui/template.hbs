@@ -18,22 +18,6 @@
   {{/if}}
 </div>
 
-<div class="chapter-controls">
-  <div class="chapter-controls__left">
-  {{#if chapter.previousChapter}}
-    {{navigate-button 'previous' chapter action=(action previous) class="previous-button"}}
-  {{/if}}
-  </div>
-  <div class="chapter-controls__center">
-    {{share-button chapter=chapter}}
-  </div>
-  <div class="chapter-controls__right">
-  {{#if chapter.nextChapter}}
-    {{navigate-button 'next' chapter action=(action next) class="next-button"}}
-  {{/if}}
-  </div>
-</div>
-
 <div class="chapter-body">
   <div class="chapter-description">
     {{{chapter.content}}}
@@ -80,4 +64,20 @@
     {{/each}}
   </ul>
   {{/with}}
+</div>
+
+<div class="chapter-controls">
+  <div class="chapter-controls__left">
+  {{#if chapter.previousChapter}}
+    {{navigate-button 'previous' chapter action=(action previous) class="previous-button"}}
+  {{/if}}
+  </div>
+  <div class="chapter-controls__center">
+    {{share-button chapter=chapter}}
+  </div>
+  <div class="chapter-controls__right">
+  {{#if chapter.nextChapter}}
+    {{navigate-button 'next' chapter action=(action next) class="next-button"}}
+  {{/if}}
+  </div>
 </div>

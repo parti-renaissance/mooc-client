@@ -17,6 +17,7 @@
   appearance: none;
   background: transparent;
   border: none;
+  margin-right: 10px;
 
   @include media('>=medium') {
     display: none;
@@ -40,10 +41,11 @@
   font-style: italic;
   color: black;
   letter-spacing: 0;
+  margin-left: auto;
+  min-width: 50px;
 
   text-decoration: none;
 
-  margin-left: auto;
 
   @include media('>narrow') {
     font-size: 18px;
@@ -72,16 +74,9 @@
   font-weight: 300;
   color: $darkgray;
 
-  span {
-    display: none;
-  }
-
   @include media('>=medium') {
     letter-spacing: 1.1px;
     font-size: 24px;
 
-    span {
-      display: contents;
-    }
   }
 }
