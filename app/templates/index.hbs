@@ -4,14 +4,19 @@
 
   <main class="mooc-list">
     <h1 class="mooc-list__header">Découvrez les formations en ligne de La République En Marche !</h1>
-    <p class="mooc-list__blurb">Ces formations en ligne sont gratuites et accessibles à tous.</p>
+    <p class="mooc-list__blurb">
+        Ces formations sont gratuites et accessibles à tous. Vous souhaitez mieux comprendre le
+        fonctionnement de la vie politique nationale, locale ou européenne ? Vous souhaitez passer
+        à l’action mais ne savez pas par où commencer ? À vous de jouer !
+    </p>
 
     {{#flex-layout class="mooc-homepage" items=sorted as |item|}}
     <li>{{mooc-card item=item}}</li>
     {{/flex-layout}}
 
     <li class="mooc-incoming">
-      D'autres formations en ligne seront bientôt disponibles !
+      Vous avez une formation que vous souhaiteriez voir proposée ? Une amélioration à apporter
+      à une formation existante ? Ecrivez-nous sur formation@en-marche.fr
     </li>
 
   </main>
