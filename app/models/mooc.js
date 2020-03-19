@@ -6,7 +6,7 @@ export default DS.Model.extend({
   image: DS.attr('string'), // index page thumbnail
   articleImage: DS.attr('string'), // index page thumbnail
   description: DS.attr('string'), // index page summary
-  chapterCount: DS.attr('number'), // index page week count
+  chapterCount: DS.attr('number'), // index page chapter count
   slug: DS.attr('string'),
   content: DS.attr('string'),
   youtubeDuration: DS.attr('string'),

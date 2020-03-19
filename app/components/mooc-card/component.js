@@ -4,15 +4,15 @@ import { computed } from '@ember/object';
 export default Component.extend({
   tagName: '',
 
-  weeks: computed('item.chapterCount', function() {
+  chapters: computed('item.chapterCount', function() {
     if (!this.item) {
       return;
     }
     let { chapterCount } = this.item;
     if (chapterCount === 1) {
-      return '1 semaine';
+      return '1 chapitre';
     } else {
-      return `${chapterCount} semaines`;
+      return `${chapterCount} chapitres`;
     }
   })
 });
