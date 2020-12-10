@@ -72,7 +72,7 @@
     "node": "^4.5 || 6.* || >= 7.*"
   },
   "dependencies": {
-    "dotenv": "^6.0.0",
+    "dotenv": "^6.2.0",
     "fastboot-app-server": "^1.1.2-beta.1",
     "fastboot-gcloud-storage-downloader": "^1.0.0",
     "fastboot-gcloud-storage-notifier": "^1.0.0"
