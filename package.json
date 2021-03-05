@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "dotenv": "6.0.0",
-    "fastboot-app-server": "1.1.2-beta.1",
+    "fastboot-app-server": "2.0.0",
     "fastboot-gcloud-storage-downloader": "1.0.0",
     "fastboot-gcloud-storage-notifier": "1.0.0"
   }
