@@ -1,0 +1,693 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.22.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-AXIOS-174505:
+    - ember-cli-deploy-gcloud-storage > @google-cloud/storage > @google-cloud/common > google-auto-auth > gcp-metadata > axios:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > @google-cloud/storage > @google-cloud/common > google-auto-auth > gcp-metadata > axios:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > @google-cloud/storage > @google-cloud/common > google-auto-auth > google-auth-library > axios:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > @google-cloud/storage > @google-cloud/common > google-auto-auth > google-auth-library > axios:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > @google-cloud/storage > @google-cloud/common > google-auto-auth > google-auth-library > gtoken > axios:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > @google-cloud/storage > @google-cloud/common > google-auto-auth > google-auth-library > gtoken > axios:
+        patched: '2021-10-23T00:59:48.169Z'
+  'npm:debug:20170905':
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/bigtable > @google-cloud/common-grpc > grpc > node-pre-gyp > tar-pack > debug:
+        patched: '2021-10-23T00:59:48.169Z'
+  'npm:extend:20180424':
+    - ember-cli-deploy-gcloud > google-cloud > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > @google-cloud/storage > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > @google-cloud/storage > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/vision > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > @google-cloud/storage > request > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > @google-cloud/storage > request > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > fastboot-express-middleware > request > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > @google-cloud/storage > @google-cloud/common > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > @google-cloud/storage > @google-cloud/common > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > @ember-decorators/argument > ember-try > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli > console-ui > inquirer > external-editor > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/speech > request > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/bigtable > @google-cloud/common-grpc > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/datastore > google-gax > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-sass > broccoli-sass-source-maps > node-sass > request > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/logging > google-auto-auth > gcp-metadata > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > @google-cloud/storage > @google-cloud/common > google-auto-auth > gcp-metadata > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > @google-cloud/storage > @google-cloud/common > google-auto-auth > gcp-metadata > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-sass > broccoli-sass-source-maps > node-sass > node-gyp > request > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/bigquery > @google-cloud/common > google-auto-auth > gcp-metadata > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/bigquery > @google-cloud/common > google-auto-auth > gcp-metadata > retry-request > request > extend:
+        patched: '2021-10-23T00:59:48.169Z'
+  'npm:hoek:20180212':
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/speech > request > hawk > hoek:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-sass > broccoli-sass-source-maps > node-sass > request > hawk > hoek:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/speech > request > hawk > boom > hoek:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-sass > broccoli-sass-source-maps > node-sass > request > hawk > boom > hoek:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/speech > request > hawk > sntp > hoek:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-sass > broccoli-sass-source-maps > node-sass > request > hawk > sntp > hoek:
+        patched: '2021-10-23T00:59:48.169Z'
+  SNYK-JS-LODASH-567746:
+    - ember-cli-autoprefixer > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-data > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-fastboot-app-server > archiver > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > ember-cli-node-assets > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-fastboot-app-server > archiver > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > @google-cloud/storage > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > @google-cloud/storage > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-data > babel-plugin-transform-es2015-block-scoping > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-data > babel-plugin-transform-es2015-block-scoping > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-data > babel-plugin-transform-es2015-block-scoping > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-data > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli > console-ui > inquirer > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-fastboot-app-server > archiver > archiver-utils > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-fastboot-app-server > archiver > zip-stream > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-eslint > broccoli-lint-eslint > eslint > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > @ember-decorators/argument > babel-plugin-filter-imports > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - broccoli-asset-rev > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-htmlbars > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-uglify > broccoli-uglify-sourcemap > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > @ember-decorators/argument > babel-plugin-filter-imports > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-basic-dropdown > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-burger-menu > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-app-version > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-cjs-transform > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-document-title > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-dotenv > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-head > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-moment-shim > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-qunit > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-export-application-global > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-fetch > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-load-initializers > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-maybe-import-regenerator > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-moment > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-resolver > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-responsive > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon-qunit > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-truth-helpers > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-basic-dropdown > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-burger-menu > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-app-version > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-cjs-transform > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-document-title > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-dotenv > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-head > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-moment-shim > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-qunit > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-export-application-global > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-fetch > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-load-initializers > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-maybe-import-regenerator > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-moment > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-resolver > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-responsive > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon-qunit > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-truth-helpers > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-block-scoping > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-data > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-basic-dropdown > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-burger-menu > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-app-version > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-cjs-transform > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-document-title > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-dotenv > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-head > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-moment-shim > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-qunit > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-export-application-global > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-fetch > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-load-initializers > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-maybe-import-regenerator > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-moment > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-resolver > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-responsive > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon-qunit > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-truth-helpers > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-data > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-eslint > broccoli-lint-eslint > eslint > inquirer > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-eslint > broccoli-lint-eslint > eslint > table > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-sass > broccoli-sass-source-maps > node-sass > sass-graph > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > @ember-decorators/argument > ember-try > ember-try-config > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-data > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-basic-dropdown > ember-cli-htmlbars > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-head > ember-cli-htmlbars > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > ember-cli-htmlbars > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-burger-menu > ember-cli-htmlbars > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > broccoli-stew > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-moment-shim > broccoli-stew > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-fetch > broccoli-stew > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-autoprefixer > broccoli-autoprefixer > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-eslint > broccoli-lint-eslint > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-basic-dropdown > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-burger-menu > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-app-version > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-cjs-transform > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-document-title > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-dotenv > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-head > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-moment-shim > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-qunit > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-export-application-global > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-fetch > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-load-initializers > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-maybe-import-regenerator > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-moment > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-resolver > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-responsive > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon-qunit > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-truth-helpers > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-types > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-basic-dropdown > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-burger-menu > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-app-version > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-cjs-transform > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-document-title > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-dotenv > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-head > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-moment-shim > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-qunit > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-export-application-global > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-fetch > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-load-initializers > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-maybe-import-regenerator > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-moment > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-resolver > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-responsive > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon-qunit > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-truth-helpers > ember-cli-babel > babel-plugin-transform-es2015-modules-amd > babel-template > babel-traverse > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-basic-dropdown > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-burger-menu > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-app-version > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-cjs-transform > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-document-title > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-dotenv > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-head > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-moment-shim > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-qunit > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-data > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-export-application-global > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-fetch > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-load-initializers > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-maybe-import-regenerator > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-moment > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-resolver > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-responsive > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon-qunit > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-truth-helpers > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-classes > babel-helper-define-map > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-basic-dropdown > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-burger-menu > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-app-version > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-cjs-transform > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-document-title > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-dotenv > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-head > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-moment-shim > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-qunit > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-data > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-export-application-global > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-fetch > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-load-initializers > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-maybe-import-regenerator > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-moment > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-resolver > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-responsive > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon-qunit > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-truth-helpers > ember-cli-babel > babel-preset-env > babel-plugin-transform-es2015-sticky-regex > babel-helper-regex > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-basic-dropdown > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-burger-menu > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-app-version > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-cjs-transform > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-document-title > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-dotenv > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-head > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-moment-shim > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-qunit > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-export-application-global > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-fetch > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-load-initializers > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-maybe-import-regenerator > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-moment > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-resolver > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-responsive > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon-qunit > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-truth-helpers > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-generator > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-basic-dropdown > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-burger-menu > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-app-version > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-cjs-transform > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud-storage > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcs-index > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-document-title > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-dotenv > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-head > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-moment-shim > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-qunit > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-export-application-global > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-fetch > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-load-initializers > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-maybe-import-regenerator > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-moment > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-resolver > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-responsive > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon-qunit > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-truth-helpers > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-register > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > ember-cli-deploy-elastic-beanstalk > aws-sdk > xml2js > xmlbuilder > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-sass > broccoli-sass-source-maps > node-sass > gaze > globule > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-app-version > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-cjs-transform > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-document-title > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-dotenv > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-fastboot > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-qunit > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-export-application-global > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-load-initializers > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-maybe-import-regenerator > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-moment > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-resolver > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-responsive > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-sinon-qunit > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-truth-helpers > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > ember-cli-deploy-elastic-beanstalk > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/compute > async > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/datastore > google-gax > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/bigtable > @google-cloud/common-grpc > grpc > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+  'npm:lodash:20180130':
+    - ember-cli-deploy-display-revisions > cli-table2 > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > ember-cli-deploy-elastic-beanstalk > inquirer > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-mirage > broccoli-replace > applause > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-font-awesome > @ember-decorators/argument > ember-try > cli-table2 > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > ember-cli-deploy-elastic-beanstalk > ember-cli-babel > broccoli-babel-transpiler > babel-core > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > ember-cli-deploy-elastic-beanstalk > ember-cli-babel > broccoli-babel-transpiler > babel-core > babel-plugin-proto-to-assign > lodash:
+        patched: '2021-10-23T00:59:48.169Z'
+  'npm:minimatch:20160620':
+    - ember-cli-deploy-gcloud > ember-cli-deploy-elastic-beanstalk > ember-cli-babel > broccoli-babel-transpiler > babel-core > minimatch:
+        patched: '2021-10-23T00:59:48.169Z'
+  'npm:stringstream:20180511':
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/speech > request > stringstream:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/bigquery > @google-cloud/common > google-auto-auth > gcp-metadata > retry-request > request > stringstream:
+        patched: '2021-10-23T00:59:48.169Z'
+  'npm:tough-cookie:20170905':
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/speech > request > tough-cookie:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/bigquery > @google-cloud/common > google-auto-auth > gcp-metadata > retry-request > request > tough-cookie:
+        patched: '2021-10-23T00:59:48.169Z'
+  'npm:tunnel-agent:20170305':
+    - ember-cli-sass > broccoli-sass-source-maps > node-sass > request > tunnel-agent:
+        patched: '2021-10-23T00:59:48.169Z'
+    - ember-cli-deploy-gcloud > google-cloud > @google-cloud/bigquery > @google-cloud/common > google-auto-auth > gcp-metadata > retry-request > request > tunnel-agent:
+        patched: '2021-10-23T00:59:48.169Z'

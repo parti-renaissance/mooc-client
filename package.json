@@ -14,7 +14,9 @@
     "build": "ember build",
     "lint:js": "eslint ./*.js app blueprints config lib server tests",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@typeform/embed": "0.5.8",
@@ -75,6 +77,8 @@
     "dotenv": "6.0.0",
     "fastboot-app-server": "2.0.0",
     "fastboot-gcloud-storage-downloader": "1.0.0",
-    "fastboot-gcloud-storage-notifier": "1.0.0"
-  }
+    "fastboot-gcloud-storage-notifier": "1.0.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
