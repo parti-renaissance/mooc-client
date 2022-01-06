@@ -61,7 +61,7 @@
     "ember-responsive": "3.0.0-beta.3",
     "ember-sinon": "2.1.0",
     "ember-sinon-qunit": "3.1.0",
-    "ember-source": "3.1.2",
+    "ember-source": "3.28.1",
     "ember-truth-helpers": "2.0.0",
     "eslint-plugin-ember": "5.2.0",
     "include-media": "1.4.9",
