@@ -6,3 +6,5 @@ patch:
   SNYK-JS-LODASH-567746:
     - ember-source > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
         patched: '2022-01-06T12:37:08.756Z'
+    - ember-cli-deploy-gcloud > ember-cli-deploy-elastic-beanstalk > ember-cli-babel > broccoli-babel-transpiler > broccoli-persistent-filter > async-promise-queue > async > lodash:
+        patched: '2022-03-25T21:52:02.082Z'
