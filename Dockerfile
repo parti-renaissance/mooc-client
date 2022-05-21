@@ -1,4 +1,4 @@
-FROM node:16.13.1
+FROM node:gallium-buster
 
 RUN mkdir /code
 WORKDIR /code
