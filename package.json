@@ -36,7 +36,7 @@
     "ember-cli-deploy-gcloud": "0.4.0",
     "ember-cli-deploy-gcloud-storage": "0.4.0",
     "ember-cli-deploy-gcs-index": "1.0.1",
-    "ember-cli-deploy-revision-data": "1.0.0",
+    "ember-cli-deploy-revision-data": "2.0.0",
     "ember-cli-document-title": "0.4.0",
     "ember-cli-dotenv": "2.2.1",
     "ember-cli-eslint": "4.2.3",
