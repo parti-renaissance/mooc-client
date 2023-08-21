@@ -78,7 +78,7 @@
     "fastboot-app-server": "2.0.0",
     "fastboot-gcloud-storage-downloader": "1.0.0",
     "fastboot-gcloud-storage-notifier": "1.0.0",
-    "@snyk/protect": "latest"
+    "@snyk/protect": "1.1198.0"
   },
   "snyk": true
 }
